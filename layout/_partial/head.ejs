@@ -1,0 +1,21 @@
+<head>
+    <meta charset="UTF-8">
+
+    <title>
+        <% if (page.title) { %>
+          <%= page.title + ' - ' + config.title %>
+        <% } else{%>
+          <%= config.title %>
+        <% } %>
+    </title>
+
+
+    <!-- Spectre.css framework (v0.5.8) -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- theme css & js -->
+    <link rel="stylesheet" href="css/book.css">
+    <script src="js/book.js"></script>
+</head>

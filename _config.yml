@@ -9,10 +9,4 @@ menu:
   Contact: /contact
   Archives: /archives
 
-# stylesheets loaded in the <head>
-stylesheets:
-- /css/book.css
 
-# scripts loaded in the end of the body
-scripts:
-- /js/book.js

@@ -1,6 +1,14 @@
-
-<%-partial('partials/recent-posts')%>
-
-<div id="paginator">
-  <%-paginator()%>
+<div class="container">
+  <div class="columns">
+    <%# Sidebar %>
+    <div class="column col-3">
+      <p>Sidebar</p>
+    </div>
+    <div class="column col-9">
+      <%-partial('partials/recent-posts')%>
+      <div id="paginator">
+        <%-paginator()%>
+      </div>
+    </div>
+  </div>
 </div>
