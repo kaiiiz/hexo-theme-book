@@ -9,6 +9,10 @@ html, body {
 }
 
 .book-nav {
+  ul {
+    list-style: none;
+    margin: 0;
+  }
 }
 
 .home-post {
@@ -20,4 +24,60 @@ html, body {
   font-size: 0.7rem;
   font-weight: bold;
   margin: 0.8rem 0;
+}
+
+.site-meta {
+  margin-top: 36px;
+}
+
+.recent-posts {
+  margin-top: .4rem;
+}
+
+.recent-posts-left {
+  width: 0;
+  .timeline-icon::before {
+    left: -1rem !important;
+  }
+}
+
+.recent-posts-content {
+  h6 {
+    font-weight: bold;
+    padding: 12px 0 4px 0;
+    margin: 0;
+  }
+  div {
+    margin-bottom: 4px;
+    width: 150px;
+    overflow : hidden;
+    text-overflow : ellipsis;
+    white-space : nowrap;
+  }
+}
+
+.recent-posts-month {
+  background-color: white;
+  border: .1rem solid #5755d9;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: .4rem;
+  left: -1.05rem;
+  position: absolute;
+  top: .9rem;
+  width: .4rem;
+}
+
+.recent-posts-item {
+  position: relative;
+  ::before {
+    background: #dadee4;
+    content: "";
+    height: 100%;
+    left: -18px;
+    position: absolute;
+    top: 1.3rem;
+    width: 2px;
+  }
 }

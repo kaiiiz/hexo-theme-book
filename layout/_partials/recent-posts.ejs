@@ -1,0 +1,44 @@
+
+<% if (page.posts.length > 0) { %>
+  <div class="recent-posts">
+    <h6>Recent Posts</h6>
+    <% if (page.posts.length > 0) { %>
+        <div class="timeline">
+
+          <% var previous = '9999-99'; %>
+          <% var next; %>
+          <% site.posts.sort('date', -1).limit(15).each(post => { %>
+            <% next = date(post.date, 'YYYY-MM'); %>
+
+            <% if(previous == '9999-99') { %>
+                <div class="recent-posts-item">
+                  <div class="recent-posts-left">
+                    <a class="recent-posts-month"></a>
+                  </div>
+                  <div class="recent-posts-content">
+                    <h6><%= date(post.date, 'MMMM YYYY') %></h6>
+            <% } else if(previous != next) { %>
+                  </div>
+                </div>
+                <div class="recent-posts-item">
+                  <div class="recent-posts-left">
+                    <a class="recent-posts-month"></a>
+                  </div>
+                  <div class="recent-posts-content">
+                    <h6><%= date(post.date, 'MMMM YYYY') %></h6>
+            <% } %>
+
+            <div>
+              <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+            </div>
+            
+            <% previous = next; %>
+          <% }); %>
+            </div>
+          </div>
+
+        </div>
+    <% } %>
+
+  </div>
+<% } %>

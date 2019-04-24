@@ -1,7 +1,8 @@
 <div class="container">
-  <div class="columns col-gapless">
+  <div class="columns">
     <%# Sidebar %>
     <div class="column col-2 book-nav">
+      <h4 class="site-meta"><%= config.title %></h4>
       <ul>
         <li><a href="/"><%= __('nav.home') %></a></li>
         <% if(theme.nav) { %>
@@ -21,11 +22,12 @@
           <% }) %>
         <% } %>
       </ul>
-      <%-partial('partials/recent-posts')%>
+      <hr>
+      <%-partial('_partials/recent-posts')%>
     </div>
 
     <%# Post %>
-    <div class="column col-10">
+    <div class="column col-9">
       <% page.posts.sort('date').reverse().forEach(function(post){ %>
         <div class="home-post">
           <!-- Title -->
