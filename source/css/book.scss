@@ -3,26 +3,21 @@ html, body {
   margin: 0;
 }
 
-.container {
-  height: 100%;
-}
-
-.columns {
-  height: 100%;
-}
-
-a:hover {
-  
-}
-
 .book-content {
   height: 100%;
+  padding: 0 200px;
 }
 
-.book-sidebar {
-  background-color: #f7f8f9;
+.book-nav {
 }
 
-.home-post-title {
-  text-decoration: none;
+.home-post {
+  max-width: 40rem;
+  margin: 36px;
+}
+
+.home-post-meta {
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin: 0.8rem 0;
 }

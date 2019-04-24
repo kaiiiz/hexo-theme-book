@@ -1,22 +1,22 @@
 <div class="container">
-  <div class="columns">
+  <div class="columns col-gapless">
     <%# Sidebar %>
-    <div class="column col-2 book-sidebar">
+    <div class="column col-2 book-nav">
       <ul>
-        <li><a href="/"><%= __('sidebar.home') %></a></li>
-        <% if(theme.sidebar) { %>
-          <% theme.sidebar.forEach(function(nav){ %>
+        <li><a href="/"><%= __('nav.home') %></a></li>
+        <% if(theme.nav) { %>
+          <% theme.nav.forEach(function(nav){ %>
             <% if(nav == 'Archives'){ %>
-                <li><a href="/archives"><%= __('sidebar.archives') %></a></li>
+                <li><a href="/archives"><%= __('nav.archives') %></a></li>
             <% } %>
             <% if(nav == 'Categories'){ %>
-                <li><a href="/categories"><%= __('sidebar.categories') %></a></li>
+                <li><a href="/categories"><%= __('nav.categories') %></a></li>
             <% } %>
             <% if(nav == 'Tags'){ %>
-                <li><a href="/tags"><%= __('sidebar.tags') %></a></li>
+                <li><a href="/tags"><%= __('nav.tags') %></a></li>
             <% } %>
             <% if(nav == 'About'){ %>
-                <li><a href="/about"><%= __('sidebar.about') %></a></li>
+                <li><a href="/about"><%= __('nav.about') %></a></li>
             <% } %>
           <% }) %>
         <% } %>
@@ -25,7 +25,7 @@
     </div>
 
     <%# Post %>
-    <div class="column col-9">
+    <div class="column col-10">
       <% page.posts.sort('date').reverse().forEach(function(post){ %>
         <div class="home-post">
           <!-- Title -->
@@ -34,7 +34,7 @@
           </a>
 
           <!-- Post meta -->
-          <div class="home-post-meta">
+          <h5 class="home-post-meta">
               <!-- Date -->
               <%= post.date.format(config.date_format) %>
               <!-- Categories -->
@@ -47,25 +47,20 @@
               <% post.tags.forEach(function(tag){ %>
                   <a href="<%= config.root %>tags/<%= tag.name %>">#<%= tag.name %></a>
               <% }) %>
-          </div>
-
-          <hr>
+          </h5>
 
           <!-- Content -->
           <div class="home-post-excerpt">
-              <%- post.excerpt || post.content %>
+            <%- truncate(strip_html(post.content), {length: 300, omission: ' '}) %>
+            <a href="<%- config.root %><%- post.path %>">
+                ...
+            </a>
           </div>
 
-          <!-- Read More link -->
-          <% if(post.excerpt) { %>
-              <div class="home-post-excerpt_link">
-                  <a href="<%- config.root %><%- post.path %>">
-                      <span><%= __('index.read-more') %></span>
-                  </a>
-              </div>
-          <% } %>
           </div>
       <% }) %>
+
+          <hr>
       
     </div>
   </div>
