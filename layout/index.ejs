@@ -1,14 +1,72 @@
 <div class="container">
   <div class="columns">
     <%# Sidebar %>
-    <div class="column col-3">
-      <p>Sidebar</p>
-    </div>
-    <div class="column col-9">
+    <div class="column col-2 book-sidebar">
+      <ul>
+        <li><a href="/"><%= __('sidebar.home') %></a></li>
+        <% if(theme.sidebar) { %>
+          <% theme.sidebar.forEach(function(nav){ %>
+            <% if(nav == 'Archives'){ %>
+                <li><a href="/archives"><%= __('sidebar.archives') %></a></li>
+            <% } %>
+            <% if(nav == 'Categories'){ %>
+                <li><a href="/categories"><%= __('sidebar.categories') %></a></li>
+            <% } %>
+            <% if(nav == 'Tags'){ %>
+                <li><a href="/tags"><%= __('sidebar.tags') %></a></li>
+            <% } %>
+            <% if(nav == 'About'){ %>
+                <li><a href="/about"><%= __('sidebar.about') %></a></li>
+            <% } %>
+          <% }) %>
+        <% } %>
+      </ul>
       <%-partial('partials/recent-posts')%>
-      <div id="paginator">
-        <%-paginator()%>
-      </div>
+    </div>
+
+    <%# Post %>
+    <div class="column col-9">
+      <% page.posts.sort('date').reverse().forEach(function(post){ %>
+        <div class="home-post">
+          <!-- Title -->
+          <a href="<%- config.root %><%- post.path %>" class="home-post-title">
+            <h3><%- post.title %></h3>
+          </a>
+
+          <!-- Post meta -->
+          <div class="home-post-meta">
+              <!-- Date -->
+              <%= post.date.format(config.date_format) %>
+              <!-- Categories -->
+              <%- list_categories(post.categories, {
+                  show_count: false,
+                  style: 'none',
+                  separator: ' '
+              }) %>
+              <!-- Tags -->
+              <% post.tags.forEach(function(tag){ %>
+                  <a href="<%= config.root %>tags/<%= tag.name %>">#<%= tag.name %></a>
+              <% }) %>
+          </div>
+
+          <hr>
+
+          <!-- Content -->
+          <div class="home-post-excerpt">
+              <%- post.excerpt || post.content %>
+          </div>
+
+          <!-- Read More link -->
+          <% if(post.excerpt) { %>
+              <div class="home-post-excerpt_link">
+                  <a href="<%- config.root %><%- post.path %>">
+                      <span><%= __('index.read-more') %></span>
+                  </a>
+              </div>
+          <% } %>
+          </div>
+      <% }) %>
+      
     </div>
   </div>
 </div>

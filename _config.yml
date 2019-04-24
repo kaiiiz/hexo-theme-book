@@ -1,12 +1,6 @@
-
-# html lang
-language: en
-
-# main menu navigation
-menu:
-  Home: /
-  About: /about
-  Contact: /contact
-  Archives: /archives
-
-
+# sidebar navigation
+sidebar:
+  - Archives
+  - Categories
+  - Tags
+  - About
