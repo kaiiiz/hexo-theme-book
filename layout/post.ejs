@@ -1,9 +1,60 @@
+<div class="columns">
+  <div class="column col-9">
+    <div class="book-post">
+      <h1><%=page.title%></h1>
+      <%-page.content%>
+    </div>
 
-<article id="post">
-  <h1><%=page.title%></h1>
-  <%-page.content%>
-</article>
-
-<div id="paginator">
-  <%-paginator()%>
+    <div id="paginator">
+      <%-paginator()%>
+    </div>
+  </div>
+  <div class="column col-3">
+    <div class="book-toc">
+      <div class="book-tocbot">
+      </div>
+      <div>
+        <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+      </div>
+    </div>
+  </div>
 </div>
+
+<script>
+tocbot.init({
+  tocSelector: '.book-tocbot',
+  contentSelector: '.book-post',
+  headingSelector: 'h1, h2, h3, h4, h5',
+  collapseDepth: 2,
+  orderedList: false,
+  scrollSmooth: false,
+});
+
+function expand_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 6,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "collapse_toc()");
+  b.innerHTML = "Collapse all"
+}
+
+function collapse_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 2,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "expand_toc()");
+  b.innerHTML = "Expand all"
+}
+</script>

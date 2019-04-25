@@ -3,9 +3,13 @@ html, body {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 .book-container {
   height: 100%;
-  padding: 0 200px;
+  padding: 0 150px;
 }
 
 .book-content {
@@ -90,4 +94,28 @@ html, body {
   li a {
     margin-left: .4rem;
   }
+}
+
+.book-post {
+  max-width: 100%;
+}
+
+.book-toc {
+  position: fixed;
+  ul {
+    list-style: none;
+    overflow: hidden;
+    position: relative;
+    li {
+      margin-left: 6px;
+    }
+  }
+}
+
+.is-active-link::before {
+  background-color: #5755d9 !important;
+}
+
+.book-toc-expand {
+  cursor: pointer;
 }
