@@ -1,9 +1,17 @@
 
 <% if (site.posts.length > 0) { %>
   <div class="recent-posts">
-    <h6>Recent Posts</h6>
     
     <div class="timeline">
+      <div class="recent-posts-item">
+        <div class="recent-posts-left">
+          <a class="recent-posts-month"></a>
+        </div>
+        <div class="recent-posts-content">
+          <h6>Recent Posts</h6>
+        </div>
+      </div>
+
     <%
         var months = {};
         site.posts.sort('date').reverse().limit(15).each(post => {
