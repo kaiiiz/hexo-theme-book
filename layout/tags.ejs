@@ -1,0 +1,9 @@
+<% const tagsList = list_tags({ show_count: false }); %>
+<div class='book-tags'>
+  <h2>Tags</h2>
+  <% if (tagsList !== "") { %>
+    <%-tagsList%>
+  <% } else { %>
+    <p>None.</p>
+  <% } %>
+</div>

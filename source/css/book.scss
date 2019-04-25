@@ -3,12 +3,18 @@ html, body {
   margin: 0;
 }
 
-.book-content {
+.book-container {
   height: 100%;
   padding: 0 200px;
 }
 
+.book-content {
+  margin-top: 36px;
+  margin-left: 36px;
+}
+
 .book-nav {
+  margin-top: 36px;
   ul {
     list-style: none;
     margin: 0;
@@ -17,17 +23,13 @@ html, body {
 
 .home-post {
   max-width: 40rem;
-  margin: 36px;
+  margin: 36px 36px 36px 0;
 }
 
 .home-post-meta {
   font-size: 0.7rem;
   font-weight: bold;
   margin: 0.8rem 0;
-}
-
-.site-meta {
-  margin-top: 36px;
 }
 
 .recent-posts {
@@ -44,7 +46,7 @@ html, body {
 .recent-posts-content {
   h6 {
     font-weight: bold;
-    padding: 12px 0 4px 0;
+    padding: 12px 0 6px 0;
     margin: 0;
   }
   div {
@@ -79,5 +81,17 @@ html, body {
     position: absolute;
     top: 1.3rem;
     width: 2px;
+  }
+}
+
+.archive-list-title {
+  margin: 0 0 5px 0;
+}
+
+.archive-list-item {
+  list-style: none;
+  margin: 0;
+  li a {
+    margin-left: .4rem;
   }
 }

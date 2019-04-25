@@ -1,0 +1,24 @@
+<h4 class="site-meta">
+    <%= config.title %>
+</h4>
+<ul>
+  <li><a href="/"><%= __('nav.home') %></a></li>
+  <% if(theme.nav) { %>
+      <% theme.nav.forEach(function(nav){ %>
+      <% if(nav == 'Archives'){ %>
+          <li><a href="/archives"><%= __('nav.archives') %></a></li>
+      <% } %>
+      <% if(nav == 'Categories'){ %>
+          <li><a href="/categories"><%= __('nav.categories') %></a></li>
+      <% } %>
+      <% if(nav == 'Tags'){ %>
+          <li><a href="/tags"><%= __('nav.tags') %></a></li>
+      <% } %>
+      <% if(nav == 'About'){ %>
+          <li><a href="/about"><%= __('nav.about') %></a></li>
+      <% } %>
+      <% }) %>
+  <% } %>
+</ul>
+<hr>
+<%- partial('_partials/recent-posts') %>
