@@ -1,3 +1,5 @@
+@import 'variables';
+
 html, body {
   height: 100%;
   margin: 0;
@@ -5,6 +7,7 @@ html, body {
 
 img {
   max-width: 100%;
+  max-height: 100%;
 }
 
 .book-container {
@@ -97,6 +100,53 @@ img {
 
 .book-post {
   max-width: 95%;
+
+  h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 8px;
+      word-wrap: break-word;
+  }
+
+  hr {
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    margin: 24px 0;
+  }
+
+  dl, ol, ul {
+    margin: 24px 0 24px .8rem;
+  }
+
+  table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 16px;
+    margin: 24px 0;
+  }
+  
+  table th,
+  table td {
+    padding: 12px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  table thead th {
+    vertical-align: bottom;
+  }
+  
+  table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+  }
+
+  iframe {
+    margin: 0 0 24px 0;
+    width: 100%;
+    height: 500px;
+  }
+
+  @import 'highlight';
 }
 
 .book-toc {
@@ -128,7 +178,7 @@ img {
 }
 
 .book-tocbot-menu {
-  margin: 24px 16px;
+  margin: 24px 18px;
   font-size: 14px;
   a {
     display: block;
@@ -137,3 +187,12 @@ img {
     cursor: pointer;
   }
 }
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
