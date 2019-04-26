@@ -14,7 +14,6 @@ img {
 
 .book-content {
   margin-top: 36px;
-  margin-left: 36px;
 }
 
 .book-nav {
@@ -97,25 +96,44 @@ img {
 }
 
 .book-post {
-  max-width: 100%;
+  max-width: 95%;
 }
 
 .book-toc {
   position: fixed;
-  ul {
-    list-style: none;
-    overflow: hidden;
+  font-size: 14px;
+  .book-tocbot {
+    max-height: 450px;
+    max-width: 250px;
+    overflow: auto;
     position: relative;
-    li {
-      margin-left: 6px;
+    padding-right: 10px;
+    ul {
+      list-style: none;
+      position: inherit;
+      overflow: hidden;
+      li {
+        margin-left: 8px;
+      }
     }
   }
+}
+
+.toc-link::before {
+  background-color: #FFF !important;
 }
 
 .is-active-link::before {
   background-color: #5755d9 !important;
 }
 
-.book-toc-expand {
-  cursor: pointer;
+.book-tocbot-menu {
+  margin: 24px 16px;
+  font-size: 14px;
+  a {
+    display: block;
+    margin: 10px 0;
+    color: #999;
+    cursor: pointer;
+  }
 }
