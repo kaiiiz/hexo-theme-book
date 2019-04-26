@@ -85,3 +85,16 @@ function go_bottom() {
 }
 
 </script>
+
+<% if(theme.lightgallery) { %>
+<script>
+  $('.book-content img').each(function () {
+      $(this).wrap("<a href='" + this.src + "'>").parent('a').addClass('gallery-item');
+  })
+  $(document).ready(function() {
+    $(".book-content").lightGallery({
+        selector: '.gallery-item'
+    });
+  });
+</script>
+<% } %>

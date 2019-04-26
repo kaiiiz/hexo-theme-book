@@ -1,13 +1,13 @@
 
 <% if (site.posts.length > 0) { %>
-  <div class="recent-posts">
+  <div class="list-group">
     
     <div class="timeline">
-      <div class="recent-posts-item">
-        <div class="recent-posts-left">
-          <a class="recent-posts-month"></a>
+      <div class="list-group-item">
+        <div class="list-group-left">
+          <a class="list-group-title"></a>
         </div>
-        <div class="recent-posts-content">
+        <div class="list-group-content">
           <h6>Recent Posts</h6>
         </div>
       </div>
@@ -24,11 +24,11 @@
     %>
 
     <% Object.keys(months).forEach(month => { %>
-        <div class="recent-posts-item">
-          <div class="recent-posts-left">
-            <a class="recent-posts-month"></a>
+        <div class="list-group-item">
+          <div class="list-group-left">
+            <a class="list-group-title"></a>
           </div>
-          <div class="recent-posts-content">
+          <div class="list-group-content">
             <h6><%= date(month, 'MMMM YYYY') %></h6>
             <% months[month].map(function(post){  %>
               <div>

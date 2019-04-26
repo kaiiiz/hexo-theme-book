@@ -8,6 +8,17 @@
 }
 
 .book-content {
+  a {
+    color: $book-link-color;
+  }
+  
+  a:hover {
+    color: $book-link-hover-color;
+  }
+}
+
+.book-content {
+  margin-top: $padding-8;
 }
 
 // home
@@ -15,6 +26,13 @@
 .home-post {
   max-width: 40rem;
   margin-bottom: $padding-32;
+  a {
+    color: $book-primary-link-color;
+  }
+  
+  a:hover {
+    color: $book-primary-link-hover-color;
+  }
 }
 
 .home-post-meta {
@@ -68,19 +86,14 @@
     font-weight: bold;
   }
 
+  a:hover {
+    text-decoration: underline;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     padding-bottom: $padding-8;
     margin-bottom: $padding-16;
     border-bottom: 1px solid $border-color;
-  }
-
-  a {
-    color: $book-link-color;
-  }
-  
-  a:hover {
-    color: $book-link-hover-color;
-    text-decoration: underline;
   }
 
   p {
