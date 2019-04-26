@@ -1,0 +1,62 @@
+.book-nav {
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  a {
+    color: $book-link-color;
+  }
+  
+  a:hover {
+    color: $book-link-hover-color;
+  }
+}
+
+.recent-posts {
+  margin-top: $padding-8;
+
+  .recent-posts-content {
+    width: 150px;
+    
+    h6 {
+      font-weight: bold;
+      padding-top: $padding-10;
+      padding-bottom: $padding-6;
+      margin: 0;
+    }
+
+    div {
+      padding-bottom: $padding-4;
+      overflow : hidden;
+      text-overflow : ellipsis;
+      white-space : nowrap;
+    }
+  }
+}
+
+.recent-posts-month {
+  background-color: white;
+  border: 2px solid $book-primary-color;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: .4rem;
+  left: -1.05rem;
+  position: absolute;
+  top: .9rem;
+  width: .4rem;
+}
+
+.recent-posts-item {
+  position: relative;
+  ::before {
+    background: $border-color;
+    content: "";
+    height: 100%;
+    left: -18px;
+    position: absolute;
+    top: 1.3rem;
+    width: 1.2px;
+  }
+}

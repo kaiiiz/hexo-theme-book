@@ -15,16 +15,18 @@
 </div>
 <% */ %>
 
-<div class="container book-container">
-  <div class="columns">
-    <%# Sidebar %>
-    <div class="column col-2 book-nav">
-      <%- partial('_partials/sidebar') %>
-    </div>
+<div class="container">
+  <div class="book-container">
+    <div class="columns">
+      <%# Sidebar %>
+      <div class="column col-2 book-nav">
+        <%- partial('_partials/sidebar') %>
+      </div>
 
-    <div class="column col-10">
-      <div class="book-content">
-        <%- body %>
+      <div class="column col-10">
+        <div class="book-content">
+          <%- body %>
+        </div>
       </div>
     </div>
   </div>
