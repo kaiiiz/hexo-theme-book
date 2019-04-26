@@ -149,6 +149,16 @@ img {
   @import 'highlight';
 }
 
+.book-post-title {
+  font-size: 32px;
+}
+
+.book-post-metadata {
+  padding: 16px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .book-toc {
   position: fixed;
   font-size: 14px;
