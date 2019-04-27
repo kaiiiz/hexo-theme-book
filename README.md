@@ -93,6 +93,28 @@ markdown:
     permalinkSymbol: '# '
 ```
 
+## Katex support
+
+If you want to use Katex in your site, please use [@iktakahiro/markdown-it-katex](https://github.com/iktakahiro/markdown-it-katex/) which forks from [markdown-it-katex](https://github.com/waylonflinn/markdown-it-katex) for better render quality. (Support higher Katex version)
+
+First, install @iktakahiro/markdown-it-katex
+
+```
+$ npm install @iktakahiro/markdown-it-katex
+```
+
+Edit your site's config.yml
+
+```
+markdown:
+  ...
+  plugins:
+    ...
+    - '@iktakahiro/markdown-it-katex'
+```
+
+Katex supported functions, see: https://khan.github.io/KaTeX/docs/supported.html
+
 ## Configuration
 
 ```

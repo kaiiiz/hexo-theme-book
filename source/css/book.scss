@@ -138,7 +138,7 @@
   }
 
   p {
-    font-size: $font-size-12;
+    font-size: 16px;
     margin-bottom: $padding-10;
   }
 
@@ -148,7 +148,7 @@
     margin: $padding-16 0;
   }
 
-  dl,ol, ul {
+  dl, ol, ul {
     list-style: disc;
     margin: 0 0 0 1rem;
   }
@@ -163,6 +163,11 @@
       border-top: 1px solid $border-color;
       text-align: left;
     }
+  }
+
+  li {
+    margin-top: .4rem;
+    margin-bottom: .4rem;
   }
 
   blockquote p:last-child {
