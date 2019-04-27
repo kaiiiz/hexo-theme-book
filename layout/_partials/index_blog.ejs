@@ -9,16 +9,6 @@
     <h5 class="home-post-meta">
         <!-- Date -->
         <%= post.date.format(config.date_format) %>
-        <!-- Categories -->
-        <%- list_categories(post.categories, {
-            show_count: false,
-            style: 'none',
-            separator: ' '
-        }) %>
-        <!-- Tags -->
-        <% post.tags.forEach(function(tag){ %>
-            <a href="<%= config.root %>tags/<%= tag.name %>">#<%= tag.name %></a>
-        <% }) %>
     </h5>
 
     <!-- Content -->
