@@ -23,7 +23,7 @@
 }
 
 .home-post-title h3 {
-  font-size: $font-size-20;
+  font-size: $font-size-16;
   color: $book-primary-color;
 }
 
@@ -48,7 +48,8 @@
 
 .home-post-meta {
   font-size: 0.7rem;
-  font-weight: bold;
+  border-bottom: 1px solid $border-color;
+  padding-bottom: $padding-10;
   margin: $padding-12 0;
 }
 
