@@ -1,6 +1,13 @@
 .book-nav {
   .site-meta {
     margin: $padding-8 0 $padding-14 0;
+    a {
+      color: $book-primary-link-color;
+    }
+    
+    a:hover {
+      color: $book-primary-link-color;
+    }
   }
   
   ul {
@@ -21,6 +28,10 @@
   
   a:hover {
     color: $book-primary-link-hover-color;
+  }
+
+  .book-nav-current {
+    color: $book-primary-color;
   }
 }
 

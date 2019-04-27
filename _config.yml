@@ -1,12 +1,12 @@
 # sidebar navigation
-mode: blog
+mode: book
 nav:
   - Archives
   - Categories
   - Tags
   - About
 
-book_mode_home: /home
+book_mode_home: /home # filename under source/_posts/
 book_mode_menu:
   - name:
     link: 
