@@ -1,5 +1,5 @@
 # sidebar navigation
-mode: book
+mode: blog
 nav:
   - Archives
   - Categories
@@ -20,7 +20,7 @@ book_mode_menu:
 lightgallery: false
 
 friends:
-  - name: a
-    url: aaa
-  - name: b
-    url: bbb
+  - name: SITE A
+    url: /site_a_url
+  - name: SITE B
+    url: /site_b_url
