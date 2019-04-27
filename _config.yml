@@ -1,7 +1,7 @@
 # sidebar navigation
 
-book_mode_home: /home # filename under source/_posts/
-book_mode_menu:
+home_page: /home # filename under source/_posts/
+menu:
   - name:
     link: 
     groupof:
@@ -12,9 +12,3 @@ book_mode_menu:
         link:
 
 lightgallery: false
-
-friends:
-  - name: SITE A
-    url: /site_a_url
-  - name: SITE B
-    url: /site_b_url

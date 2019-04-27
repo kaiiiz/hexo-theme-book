@@ -5,6 +5,7 @@
 ```
 $ cd {site}
 $ hexo init
+$ npm install hexo-renderer-scss --save
 $ cd theme/
 $ git clone https://github.com/kaiiiz/hexo-theme-book.git
 ```
@@ -90,24 +91,4 @@ markdown:
     permalinkClass: header-anchor
     # The symbol used to make the permalink
     permalinkSymbol: '# '
-```
-
-## More pages
-
-```
-$ hexo new page categories
-$ hexo new page tags
-$ hexo new page about
-```
-
-add `layout: {pagename}` in `/source/{pagename}/index.md`, take tags page for instance:
-
-in `/source/tags/index.md`
-
-```
----
-title: tags
-date: 2019-04-27 16:40:22
-layout: tags
----
 ```
