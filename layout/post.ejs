@@ -1,28 +1,7 @@
 <div class="columns">
   <div class="column col-10">
     <div class="book-post">
-      <div class="book-post-info">
-        <div class="book-post-title"><%=page.title%></div>
-        <div class="book-post-metadata">
-          <!-- Date -->
-          <%= page.date.format("MMMM DD, YYYY") %>
-          <!-- Categories -->
-          <%- list_categories(page.categories, {
-              show_count: false,
-              style: 'none',
-              separator: ' '
-          }) %>
-          <!-- Tags -->
-          <% page.tags.forEach(function(tag){ %>
-              <a href="<%= config.root %>tags/<%= tag.name %>">#<%= tag.name %></a>
-          <% }) %>
-        </div>
-      </div>
       <%-page.content%>
-    </div>
-
-    <div id="paginator">
-      <%-paginator()%>
     </div>
   </div>
   <div class="column col-2">
