@@ -5,7 +5,9 @@ nav:
   - Categories
   - Tags
   - About
-menu:
+
+book_mode_home: /home
+book_mode_menu:
   - name:
     link: 
     groupof:

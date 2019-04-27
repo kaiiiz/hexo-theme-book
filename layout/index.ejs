@@ -1,39 +1,6 @@
-<% page.posts.sort('date').reverse().forEach(function(post){ %>
-  <div class="home-post">
-    <!-- Title -->
-    <a href="<%- config.root %><%- post.path %>" class="home-post-title">
-      <h3><%- post.title %></h3>
-    </a>
 
-    <!-- Post meta -->
-    <h5 class="home-post-meta">
-        <!-- Date -->
-        <%= post.date.format(config.date_format) %>
-        <!-- Categories -->
-        <%- list_categories(post.categories, {
-            show_count: false,
-            style: 'none',
-            separator: ' '
-        }) %>
-        <!-- Tags -->
-        <% post.tags.forEach(function(tag){ %>
-            <a href="<%= config.root %>tags/<%= tag.name %>">#<%= tag.name %></a>
-        <% }) %>
-    </h5>
-
-    <!-- Content -->
-    <div class="home-post-excerpt">
-      <%- truncate(strip_html(post.content), {length: 300, omission: ' '}) %>
-      <a href="<%- config.root %><%- post.path %>">
-          ...
-      </a>
-    </div>
-
-    </div>
-<% }) %>
-
-<% if (page.total > 1) { %>
-  <nav class="pager">
-      <%- paginator() %>
-  </nav>
+<% if(theme.mode == "book") { %>
+    <%- partial('_partials/index_book') %>
+<% } else { %>
+    <%- partial('_partials/index_blog') %>
 <% } %>
