@@ -22,12 +22,9 @@
     </h5>
 
     <!-- Content -->
-    <div class="home-post-excerpt">
+    <a class="home-post-excerpt" href="<%- config.root %><%- post.path %>">
       <%- truncate(strip_html(post.content), {length: 300, omission: ' '}) %>
-      <a href="<%- config.root %><%- post.path %>">
-          ...
-      </a>
-    </div>
+    </a>
 
     </div>
 <% }) %>

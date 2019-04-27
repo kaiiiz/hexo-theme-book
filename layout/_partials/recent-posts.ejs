@@ -14,7 +14,7 @@
 
     <%
         var months = {};
-        site.posts.sort('date').reverse().limit(15).each(post => {
+        site.posts.sort('date').reverse().limit(10).each(post => {
             var month = date(post.date, 'YYYY-MM');
             if(months[month] === undefined){
                 months[month] = [];
