@@ -3,12 +3,17 @@
 </h4>
 
 <%
+pathJoin = function(parts, sep){
+  var separator = sep || '/';
+  var replace   = new RegExp(separator+'{1,}', 'g');
+  return parts.join(separator).replace(replace, separator);
+}
 render_group = function(group){
     var render = "\<ul class=\"book-nav-book\"\>"; 
     render += "\<li\>";
     // add link
     if (group.link) {
-        render += "\<a href=\"" + group.link +  "\"\>" + group.name + "\</a\>";
+        render += "\<a href=\"" + url_for(group.link) +  "\"\>" + group.name + "\</a\>";
     } else {
         render += "\<span\>" + group.name + "\</span\>";
     }
