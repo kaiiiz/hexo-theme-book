@@ -92,3 +92,22 @@ markdown:
     # The symbol used to make the permalink
     permalinkSymbol: '# '
 ```
+
+## Configuration
+
+```
+menu:
+  - name: hexo-unit-test
+    link: https://github.com/hexojs/hexo-theme-unit-test
+    groupof:
+    - name: Categories
+      link: /categories
+```
+
+The `link` must follow the rule of the `permalink` your specified in `_config.yml`, for convenient I modified the entry to:
+
+```
+permalink: :title/
+```
+
+It's said that the permalink only contains the `filename` of post
