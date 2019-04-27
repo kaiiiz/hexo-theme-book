@@ -1,23 +1,55 @@
 <h4 class="site-meta">
     <%= config.title %>
 </h4>
-<ul>
-  <li><a href="/"><%= __('nav.home') %></a></li>
-  <% if(theme.nav) { %>
-      <% theme.nav.forEach(function(nav){ %>
-      <% if(nav == 'Archives'){ %>
-          <li><a href="/archives"><%= __('nav.archives') %></a></li>
-      <% } %>
-      <% if(nav == 'Categories'){ %>
-          <li><a href="/categories"><%= __('nav.categories') %></a></li>
-      <% } %>
-      <% if(nav == 'Tags'){ %>
-          <li><a href="/tags"><%= __('nav.tags') %></a></li>
-      <% } %>
-      <% if(nav == 'About'){ %>
-          <li><a href="/about"><%= __('nav.about') %></a></li>
-      <% } %>
-      <% }) %>
-  <% } %>
-</ul>
-<%- partial('_partials/recent-posts') %>
+
+<%
+render_group = function(group){
+    var render = "\<ul class=\"book-nav-book\"\>"; 
+    render += "\<li\>";
+    // add link
+    if (group.link) {
+        render += "\<a href=\"" + group.link +  "\"\>" + group.name + "\</a\>";
+    } else {
+        render += "\<span\>" + group.name + "\</span\>";
+    }
+    // add subdirectory
+    if (group.groupof) {
+        for(let i = 0; i < group.groupof.length; i++) {
+            render += render_group(group.groupof[i]);
+        }
+    }
+    render += "\</li\>";
+    render += "\</ul\>";
+    return render;
+}
+%>
+
+<% if(theme.mode == "book") { %>
+    <% if(theme.menu) { %>
+        <% theme.menu.forEach(function(group){ %>
+            <%- render_group(group) %>
+        <% }) %>
+    <% } %>
+
+<% } else { %>
+    <ul class="book-nav-blog">
+    <li><a href="/"><%= __('nav.home') %></a></li>
+    <% if(theme.nav) { %>
+        <% theme.nav.forEach(function(nav){ %>
+        <% if(nav == 'Archives'){ %>
+            <li><a href="/archives"><%= __('nav.archives') %></a></li>
+        <% } %>
+        <% if(nav == 'Categories'){ %>
+            <li><a href="/categories"><%= __('nav.categories') %></a></li>
+        <% } %>
+        <% if(nav == 'Tags'){ %>
+            <li><a href="/tags"><%= __('nav.tags') %></a></li>
+        <% } %>
+        <% if(nav == 'About'){ %>
+            <li><a href="/about"><%= __('nav.about') %></a></li>
+        <% } %>
+        <% }) %>
+    <% } %>
+    </ul>
+    <%- partial('_partials/recent-posts') %>
+<% } %>

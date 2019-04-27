@@ -2,9 +2,17 @@
   .site-meta {
     margin: $padding-8 0 $padding-14 0;
   }
+  
   ul {
     list-style: none;
+  }
+
+  .book-nav-blog, .book-nav-book {
     margin: 0;
+  }
+
+  .book-nav-book ul {
+    margin: $padding-8;
   }
 
   a {

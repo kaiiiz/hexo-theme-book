@@ -1,8 +1,18 @@
 # sidebar navigation
+mode: book
 nav:
   - Archives
   - Categories
   - Tags
   - About
+menu:
+  - name:
+    link: 
+    groupof:
+    - name:
+      link:
+      groupof:
+      - name:
+        link:
 
 lightgallery: false
