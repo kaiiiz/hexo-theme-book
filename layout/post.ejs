@@ -6,65 +6,9 @@
     <%- partial('_partials/comments') %>
   </div>
   <div class="column col-2">
-    <div class="book-toc">
-      <div class="book-tocbot">
-      </div>
-      <div class="book-tocbot-menu">
-        <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-      </div>
-    </div>
+    <%- partial('_partials/toc') %>
   </div>
 </div>
-
-<script>
-tocbot.init({
-  tocSelector: '.book-tocbot',
-  contentSelector: '.book-post',
-  headingSelector: 'h1, h2, h3, h4, h5',
-  collapseDepth: 2,
-  orderedList: false,
-  scrollSmooth: false,
-});
-
-function expand_toc(){
-  var b = document.querySelector(".book-toc-expand");
-  tocbot.init({
-    tocSelector: '.book-tocbot',
-    contentSelector: '.book-post',
-    headingSelector: 'h1, h2, h3, h4, h5',
-    collapseDepth: 6,
-    orderedList: false,
-    scrollSmooth: false,
-  });
-  b.setAttribute("onclick", "collapse_toc()");
-  b.innerHTML = "Collapse all"
-}
-
-function collapse_toc(){
-  var b = document.querySelector(".book-toc-expand");
-  tocbot.init({
-    tocSelector: '.book-tocbot',
-    contentSelector: '.book-post',
-    headingSelector: 'h1, h2, h3, h4, h5',
-    collapseDepth: 2,
-    orderedList: false,
-    scrollSmooth: false,
-  });
-  b.setAttribute("onclick", "expand_toc()");
-  b.innerHTML = "Expand all"
-}
-
-function go_top() {
-  window.scrollTo(0, 0);
-}
-
-function go_bottom() {
-  window.scrollTo(0, document.body.scrollHeight);
-}
-
-</script>
 
 <% if(theme.lightgallery) { %>
 <script>
@@ -78,3 +22,15 @@ function go_bottom() {
   });
 </script>
 <% } %>
+
+<script>
+  // add figcaption under image
+  document.querySelectorAll('img').forEach(function(img){
+    if(img.getAttribute('alt')) {
+      let parent = img.parentNode;
+      let figcaption = document.createElement('figcaption');
+      figcaption.innerHTML = img.getAttribute('alt');
+      parent.appendChild(figcaption);
+    }
+  })
+</script>

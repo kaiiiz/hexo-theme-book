@@ -191,6 +191,16 @@
     }
   }
 
+  a.gallery-item:hover {
+    text-decoration: none;
+  }
+
+  figcaption {
+    text-align: center;
+    font-size: $font-size-12;
+    color: rgb(40, 40, 40);
+  }
+
   @import '_partial/highlight';
 }
 
