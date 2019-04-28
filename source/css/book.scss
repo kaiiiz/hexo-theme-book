@@ -201,6 +201,12 @@
     color: rgb(40, 40, 40);
   }
 
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @import '_partial/highlight';
 }
 
