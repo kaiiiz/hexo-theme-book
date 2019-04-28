@@ -1,6 +1,6 @@
 # sidebar navigation
 
-home_page: /home # filename under source/_posts/
+home_page: home # filename under source/_posts/
 menu:
   - name:
     link: 

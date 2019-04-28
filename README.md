@@ -20,116 +20,61 @@ theme: hexo-theme-book
 
 For better render quality, I suggest that you should change the default renderer.
 
-### Uninstall original renderer
-
-First, uninstall the default renderer `hexo-renderer-marked`
-
-```
-$ npm uninstall hexo-renderer-marked --save
-```
-
-### Install new renderer
-
-Then, install new renderer `hexo-renderer-markdown-it`
-
-```
-$ npm install hexo-renderer-markdown-it --save
-```
-
-You can also choose to install renderer plugin
-
-```
-$ npm install markdown-it-abbr --save
-$ npm install markdown-it-container --save
-$ npm install markdown-it-deflist --save
-$ npm install markdown-it-emoji --save
-$ npm install markdown-it-footnote --save
-$ npm install markdown-it-imsize --save
-$ npm install markdown-it-ins --save
-$ npm install markdown-it-mark --save
-$ npm install markdown-it-regexp --save
-$ npm install markdown-it-sub --save
-$ npm install markdown-it-sup --save
-$ npm install markdown-it-checkbox --save
-```
-
-### Configuration
-
-Finally, add these line in your site's `_config.yml`, remember to modify entries according to your settings.
-
-```
-markdown:
-  render:
-    html: true # Doesn't escape HTML content so the tags will appear as html.
-    xhtmlOut: false # Parser will not produce XHTML compliant code.
-    breaks: true # Parser produces `<br>` tags every time there is a line break in the source document.
-    linkify: true # Returns text links as text.
-    typographer: true # Substitution of common typographical elements will take place.
-    quotes: '“”‘’' # "double" will be turned into “single”
-                   # 'single' will be turned into ‘single’
-  plugins:
-    - markdown-it-abbr
-    - markdown-it-container
-    - markdown-it-deflist
-    - markdown-it-emoji
-    - markdown-it-footnote
-    - markdown-it-imsize
-    - markdown-it-ins
-    - markdown-it-mark
-    - markdown-it-regexp
-    - markdown-it-sub
-    - markdown-it-sup
-    - markdown-it-checkbox
-  anchors:
-    # Minimum level for ID creation. (Ex. h2 to h6)
-    level: 1
-    # A suffix that is prepended to the number given if the ID is repeated.
-    collisionSuffix: 'v'
-    # If `true`, creates an anchor tag with a permalink besides the heading.
-    permalink: false
-    # Class used for the permalink anchor tag.
-    permalinkClass: header-anchor
-    # The symbol used to make the permalink
-    permalinkSymbol: '# '
-```
+The detail, see [change markdown renderer](https://github.com/kaiiiz/hexo-theme-book/wiki/Change-markdown-renderer)
 
 ## Katex support
 
-If you want to use Katex in your site, please use [@iktakahiro/markdown-it-katex](https://github.com/iktakahiro/markdown-it-katex/) which forks from [markdown-it-katex](https://github.com/waylonflinn/markdown-it-katex) for better render quality. (Support higher Katex version)
-
-First, install @iktakahiro/markdown-it-katex
-
-```
-$ npm install @iktakahiro/markdown-it-katex
-```
-
-Edit your site's config.yml
-
-```
-markdown:
-  ...
-  plugins:
-    ...
-    - '@iktakahiro/markdown-it-katex'
-```
-
-Katex supported functions, see: https://khan.github.io/KaTeX/docs/supported.html
+For Katex support, please follow the instruction above to change your renderer to `hexo-renderer-markdown-it`, after that, see [katex support](https://github.com/kaiiiz/hexo-theme-book/wiki/Katex-support)
 
 ## Configuration
 
 ```
+home_page: home # filename under source/_posts/
 menu:
-  - name: hexo-unit-test
-    link: https://github.com/hexojs/hexo-theme-unit-test
+  - name:
+    link: 
     groupof:
-    - name: Categories
-      link: /categories
+    - name:
+      link:
+      groupof:
+      - name:
+        link:
+
+lightgallery: false
+disqus_shortname: 
 ```
 
-The `link` must follow the rule of the `permalink` your specified in `_config.yml`, for convenient I modified the entry to:
+### Home page
+
+This option specified the page you want to render in home page (`url` in your site `_config.yml`)
+
+The constraint of this option is that the post must located in `source/_post/`
+
+For instance, you want to render `source/_post/dir/post.md` in your home page, you must specified `dir/post` in this option
+
+### Sidebar menu
+
+The `link` must follow the rule of the `permalink` your specified in `_config.yml` or `url`, for convenient, I modified the entry to:
 
 ```
 permalink: :title/
 ```
 
-It's said that the permalink only contains the `filename` of post
+It's said that the permalink only contains the `filename` of post.
+
+So if I try to put a link:`source/_post/dir/post.md` in sidebar, I have 2 options:
+
+1. `dir/post`
+2. `https://{your_site}/dir/post`
+
+Link option is **optional**, you can leave it empty or just remove it if you don't want to link any page.
+
+#### Groupof
+
+If you want to group some entries, use `groupof` and follow the markup above.
+
+The rule inside `grouopf` is same as outside (use `name, link, groupof`), you can also nested several groups.
+
+### Lightgallery
+
+The result of lightgallery, see [demo](https://kaiiiz.github.io/hexo-theme-book-demo/hexo-unit-test/images/)

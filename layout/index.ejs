@@ -1,5 +1,5 @@
 <% site.posts.forEach(function(post){ %>
-  <% if (post.source == "_posts" + theme.home_page + ".md") { %>
+  <% if (url_for(post.path).indexOf(url_for(theme.home_page)) != -1 || url_for(theme.home_page).indexOf(url_for(post.path)) != -1) { %>
     <div>
       <div class="columns">
         <div class="column col-10">
