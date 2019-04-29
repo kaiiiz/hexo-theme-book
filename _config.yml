@@ -1,5 +1,5 @@
 home_page: home.md # filename under /source/_posts/
 menu_page: menu.md # filename under /source/_posts/
 
-lightgallery: false
+lightgallery: true
 disqus_shortname: 
