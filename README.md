@@ -32,12 +32,7 @@ For Katex support, please follow the instruction above to change your renderer t
 
 ```yml
 home_page: home.md # filename under /source/_posts/
-menu:
-  - name: home
-    link: /
-    groupof:
-    - name:
-      link:
+menu_page: menu.md # filename under /source/_posts/
 
 lightgallery: false
 disqus_shortname: 
@@ -49,7 +44,7 @@ For smoothly updating, I recommand to create a config file named `book.yml` in `
 
 > **Notice: source folder is under your hexo work directory, not the theme one!**
 
-Copy the contents of `/themes/book/_config.yml` to `/source/_data/book.yml`, the theme will auto replace the contents of config. Now you can configure it by yourself and you can update theme smoothly.
+Copy the contents of `/themes/book/_config.yml` to `/source/_data/book.yml`, it will replace the contents of config in `/themes/book/_config.yml`. Now you can configure it independently and also, you can update theme more smoothly.
 
 ### Config
 
@@ -67,7 +62,7 @@ lightgallery: <boolean> (default: true)
 
 ## Update
 
-Jump into the theme folder, run `git pull`.
+Jump into the theme folder, run `git pull`. If you use `/source/_data/book.yml`, please note the diffrence of updated `_config.yml`.
 
 ## TODOs
 
