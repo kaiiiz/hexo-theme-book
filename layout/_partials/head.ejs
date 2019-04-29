@@ -1,6 +1,10 @@
 <head>
     <meta charset="UTF-8">
 
+    <% if (theme.favicon_url) { %>
+      <link rel="icon" href="<%- url_for(theme.favicon_url) %>" />
+    <% } %>
+
     <title>
         <% if (page.title) { %>
           <%= page.title + ' - ' + config.title %>

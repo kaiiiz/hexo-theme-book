@@ -3,3 +3,4 @@ menu_page: menu.md # filename under /source/_posts/
 
 lightgallery: true
 disqus_shortname: 
+favicon_url: favicon.ico
