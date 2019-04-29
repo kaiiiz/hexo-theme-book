@@ -3,24 +3,17 @@
     <div class="book-post">
       <%-page.content%>
     </div>
-    <%- partial('_partials/comments') %>
+    <% if(page.disqus != false) { %>
+      <%- partial('_partials/comments') %>
+    <% } %>
   </div>
   <div class="column col-2">
     <%- partial('_partials/toc') %>
   </div>
 </div>
 
-<% if(theme.lightgallery) { %>
-<script>
-  $('.book-content img').each(function () {
-      $(this).wrap("<a href='" + this.src + "'>").parent('a').addClass('gallery-item');
-  })
-  $(document).ready(function() {
-    $(".book-content").lightGallery({
-        selector: '.gallery-item'
-    });
-  });
-</script>
+<% if(page.lightgallery != false) { %>
+  <%- partial('_partials/lightgallery') %>
 <% } %>
 
 <script>
