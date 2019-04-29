@@ -31,16 +31,13 @@ For Katex support, please follow the instruction above to change your renderer t
 ## Configuration
 
 ```yml
-home_page: home # filename under source/_posts/
+home_page: home.md # filename under /source/_posts/
 menu:
-  - name:
-    link: 
+  - name: home
+    link: /
     groupof:
     - name:
       link:
-      groupof:
-      - name:
-        link:
 
 lightgallery: false
 disqus_shortname: 
