@@ -1,10 +1,5 @@
 home_page: home.md # filename under /source/_posts/
-menu:
-  - name: home
-    link: /
-    groupof:
-    - name:
-      link:
+menu_page: menu.md # filename under /source/_posts/
 
 lightgallery: false
 disqus_shortname: 

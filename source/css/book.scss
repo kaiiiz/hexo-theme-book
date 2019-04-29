@@ -1,6 +1,5 @@
 @import 'variables';
 @import 'spectre_custom';
-@import '_partial/nav';
 
 .book-container {
   height: 100%;
@@ -31,57 +30,6 @@
 .home-post-excerpt {
   font-size: 14px;
   color: #858585;
-}
-
-// home
-
-.home-post {
-  max-width: 40rem;
-  margin-bottom: $padding-32;
-  a {
-    color: $book-primary-link-color;
-  }
-  
-  a:hover {
-    color: $book-primary-color;
-  }
-}
-
-.home-post-meta {
-  font-size: 0.7rem;
-  border-bottom: 1px solid $border-color;
-  padding-bottom: $padding-10;
-  margin: $padding-12 0;
-}
-
-// archive
-
-.archive-list-item {
-  list-style: none;
-  margin: 0;
-  a {
-    color: $book-link-color;
-    margin-left: $padding-8;
-  }
-}
-
-// catergory
-
-.category-list-item {
-  a {
-    color: $book-link-color;
-  }
-  ol, ul {
-    margin-top: 0;
-  }
-}
-
-// tag
-
-.tag-list-item {
-  a {
-    color: $book-link-color;
-  }
 }
 
 // post
@@ -211,7 +159,7 @@
   @import '_partial/highlight';
 }
 
-// tocbot
+// book-toc
 
 .book-toc {
   position: fixed;
@@ -260,11 +208,48 @@
   }
 }
 
-#disqus_thread {
-  margin: 50px 0;
+// book-sidebar
+
+.book-sidebar {
+  .site-meta {
+    margin: $padding-8 0 $padding-14 0;
+    a {
+      color: $book-primary-link-color;
+    }
+    
+    a:hover {
+      color: $book-primary-link-color;
+    }
+  }
+
+  .sidebar-content {
+    ul {
+      list-style: none;
+      margin-left: 0;
+      ul {
+        margin: .8rem 0 .8rem .8rem;
+      }
+    }
+  }
+
+  a {
+    color: $book-primary-link-color;
+  }
+  
+  a:hover {
+    color: $book-primary-link-hover-color;
+  }
+
+  .book-sidebar-current {
+    color: $book-primary-color;
+  }
 }
 
 // Misc
+
+#disqus_thread {
+  margin: 50px 0;
+}
 
 .right {
   text-align: right;
@@ -272,25 +257,4 @@
 
 .left {
   text-align: left;
-}
-
-.pager {
-  text-align: center;
-  margin: $padding-32;
-
-  a, span {
-    color: $book-link-color;
-    padding: $padding-4 $padding-6;
-    margin: 0 2px;
-  }
-  
-  a:hover {
-    color: $book-link-hover-color;
-  }
-  
-  .current {
-    color: white;
-    background-color: $book-primary-color;
-    font-weight: bold;
-  }
 }

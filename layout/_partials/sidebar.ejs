@@ -2,40 +2,14 @@
     <a href="<%= config.root %>"><%= config.title %></a>
 </h4>
 
-<%
-render_group = function(group){
-    var render = "\<ul class=\"book-nav-book\"\>"; 
-    render += "\<li\>";
-    // add link
-    if (group.link) {
-        render += "\<a href=\"" + url_for(group.link) +  "\"\>" + group.name + "\</a\>";
-    } else {
-        render += "\<span\>" + group.name + "\</span\>";
-    }
-    // add subdirectory
-    if (group.groupof) {
-        for(let i = 0; i < group.groupof.length; i++) {
-            render += render_group(group.groupof[i]);
-        }
-    }
-    render += "\</li\>";
-    render += "\</ul\>";
-    return render;
-}
-%>
-
 <div class="sidebar-content">
-    <% if(theme.menu) { %>
-        <% theme.menu.forEach(function(group){ %>
-            <%- render_group(group) %>
-        <% }) %>
-    <% } %>
+    <%- sidebar %>
 </div>
 
 <script>
 document.querySelectorAll('.sidebar-content a').forEach(function(item){ 
     if(item.href === window.location.href || item.href === window.location.href.slice(0, -1)) {
-        item.className = "book-nav-current"
+        item.className = "book-sidebar-current"
     }
 })
 </script>
