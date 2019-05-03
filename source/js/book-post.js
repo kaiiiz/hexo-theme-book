@@ -7,3 +7,12 @@ document.querySelectorAll('img').forEach(function(img){
     parent.appendChild(figcaption);
   }
 })
+
+// add table wrapper
+document.querySelectorAll('.book-post > table').forEach(function(table){
+  let parent = table.parentNode;
+  let wrapper = document.createElement('div');
+  wrapper.className = 'table-wrapper'
+  parent.insertBefore(wrapper, table);
+  wrapper.appendChild(table);
+})

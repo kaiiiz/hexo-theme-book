@@ -97,16 +97,21 @@
     margin: $padding-16 0;
   }
 
-  table {
-    width: 100%;
+  .table-wrapper {
     max-width: 100%;
     margin: $padding-24 0;
-    
-    th, td {
-      padding: $padding-12;
-      border-top: 1px solid $border-color;
-      text-align: left;
+    overflow: auto;
+
+    table {
+      width: 100%;
+      
+      th, td {
+        padding: $padding-12;
+        border-top: 1px solid $border-color;
+        text-align: left;
+      }
     }
+
   }
 
   li {
