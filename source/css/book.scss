@@ -114,6 +114,17 @@
 
   }
 
+  ul, ol {
+    ol {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
   li {
     margin-top: .4rem;
     margin-bottom: .4rem;
