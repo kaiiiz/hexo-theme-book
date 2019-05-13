@@ -6,10 +6,4 @@
     <%- sidebar %>
 </div>
 
-<script>
-document.querySelectorAll('.sidebar-content a').forEach(function(item){ 
-    if(item.href === window.location.href || item.href === window.location.href.slice(0, -1)) {
-        item.className = "book-sidebar-current"
-    }
-})
-</script>
+<%- js('/js/book-sidebar') %>
