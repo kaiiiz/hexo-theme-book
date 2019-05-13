@@ -1,10 +1,3 @@
-// highlight current tab
-document.querySelectorAll('.sidebar-content a').forEach(function(item){
-    if(item.href === window.location.href || item.href === window.location.href.slice(0, -1)) {
-        item.className = "book-sidebar-current"
-    }
-})
-
 // collapse sidebar
 var i = 0;
 document.querySelectorAll('.book-sidebar > .sidebar-content > ul > li > ul > li').forEach(function(li){
@@ -36,3 +29,22 @@ document.querySelectorAll('.book-sidebar > .sidebar-content > ul > li > ul > li'
         i++;
     }
 })
+
+// highlight current tab
+document.querySelectorAll('.sidebar-content a').forEach(function(item){
+    if(item.href === window.location.href || item.href === window.location.href.slice(0, -1)) {
+        item.className = "book-sidebar-current";
+        var parent = item.parentNode;
+        while(parent.className != "sidebar-content") {
+            if(parent.className == "accordion") {
+                break;
+            }
+            parent = parent.parentNode;
+        }
+        if(parent.className == "accordion") {
+            parent.querySelector('input').setAttribute("checked", "");
+        }
+    }
+})
+
+document.getElementsByClassName("sidebar-content")[0].style.display = "block";
