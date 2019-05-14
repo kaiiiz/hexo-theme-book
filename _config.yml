@@ -1,6 +1,18 @@
 home_page: home.md # filename under /source/_posts/
 menu_page: menu.md # filename under /source/_posts/
 
-lightgallery: true
-disqus_shortname: 
 favicon_url: favicon.ico
+
+comments:
+  disqus:
+    enable: false
+    shortname: # your disqus shortname
+  gitalk:
+    enable: false
+    githubID: # your github id
+    repo: # GitHub repository e.g. kaiiiz.github.io
+    ClientID: # GitHub Application Client ID
+    ClientSecret: # GitHub Application Client Secret
+    adminUser: # GitHub repository owner and collaborators
+    labels: 'gitalk' # GitHub issue labels
+    distractionFreeMode: true

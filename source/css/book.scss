@@ -234,6 +234,7 @@
   }
 
   .sidebar-content {
+    padding-right: $padding-16;
     display: none;
     ul {
       list-style: none;
@@ -258,6 +259,12 @@
   .book-sidebar-current {
     color: $book-primary-color;
   }
+}
+
+// book-comments
+
+.book-comments {
+  padding: 0 0 $padding-24 0;
 }
 
 // Misc

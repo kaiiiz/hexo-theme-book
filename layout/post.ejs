@@ -3,17 +3,15 @@
     <div class="book-post">
       <%-page.content%>
     </div>
-    <% if(page.disqus != false) { %>
-      <%- partial('_partials/comments') %>
+    <% if(page.comments != false) { %>
+      <div class="book-comments">
+        <%- partial('_partials/comments') %>
+      </div>
     <% } %>
   </div>
   <div class="column col-2">
     <%- partial('_partials/toc') %>
   </div>
 </div>
-
-<% if(page.lightgallery != false) { %>
-  <%- partial('_partials/lightgallery') %>
-<% } %>
 
 <%- js('/js/book-post') %>

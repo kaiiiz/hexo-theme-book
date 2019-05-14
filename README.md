@@ -34,8 +34,21 @@ For Katex support, please follow the instruction above to change your renderer t
 home_page: home.md # filename under /source/_posts/
 menu_page: menu.md # filename under /source/_posts/
 
-lightgallery: false
-disqus_shortname: 
+favicon_url: favicon.ico
+
+comments:
+  disqus:
+    enable: false
+    shortname: # your disqus shortname
+  gittalk:
+    enable: false
+    githubID: # your github id
+    repo: # GitHub repository e.g. kaiiiz.github.io
+    ClientID: # GitHub Application Client ID
+    ClientSecret: # GitHub Application Client Secret
+    adminUser: # GitHub repository owner and collaborators
+    labels: 'gitalk' # GitHub issue labels
+    distractionFreeMode: true
 ```
 
 ### Preparation
@@ -55,8 +68,7 @@ The detail of config, see [Configuration](https://github.com/kaiiiz/hexo-theme-b
 ```
 ---
 title: <string>
-disqus: <boolean> (default: true)
-lightgallery: <boolean> (default: true)
+comments: <boolean> (default: true)
 ---
 ```
 
