@@ -30,38 +30,15 @@ For Katex support, please follow the instruction above to change your renderer t
 
 ## Configuration
 
-```yml
-home_page: home.md # filename under /source/_posts/
-menu_page: menu.md # filename under /source/_posts/
+The detail of config, see [Configuration](https://github.com/kaiiiz/hexo-theme-book/wiki/Configuration)
 
-favicon_url: favicon.ico
-
-comments:
-  disqus:
-    enable: false
-    shortname: # your disqus shortname
-  gittalk:
-    enable: false
-    githubID: # your github id
-    repo: # GitHub repository e.g. kaiiiz.github.io
-    ClientID: # GitHub Application Client ID
-    ClientSecret: # GitHub Application Client Secret
-    adminUser: # GitHub repository owner and collaborators
-    labels: 'gitalk' # GitHub issue labels
-    distractionFreeMode: true
-```
-
-### Preparation
+### Smooth Update
 
 For smoothly updating, I recommand to create a config file named `book.yml` in `/source/_data` folder (If it doesn't exist, create one)
 
 > **Notice: source folder is under your hexo work directory, not the theme one!**
 
 Copy the contents of `/themes/book/_config.yml` to `/source/_data/book.yml`, it will replace the contents of config in `/themes/book/_config.yml`. Now you can configure it independently and also, you can update theme more smoothly.
-
-### Config
-
-The detail of config, see [Configuration](https://github.com/kaiiiz/hexo-theme-book/wiki/Configuration)
 
 ## Post front-matter
 
