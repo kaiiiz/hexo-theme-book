@@ -1,0 +1,20 @@
+<header class="navbar">
+  <section class="navbar-section">
+    <img class="navbar-icon" src="<%- url_for(theme.favicon_url) %>">
+  </section>
+  <section class="navbar-center">
+    <%= config.title %>
+  </section>
+  <section class="navbar-section">
+    <label class="accordion-header c-hand" for="accordion-sidebar">
+      <i class="icon icon-menu"></i>
+    </label>
+  </section>
+</header>
+
+<div class="accordion">
+  <input type="checkbox" id="accordion-sidebar" name="accordion-checkbox" hidden>
+  <div class="accordion-body">
+    <%- sidebar %>
+  </div>
+</div>

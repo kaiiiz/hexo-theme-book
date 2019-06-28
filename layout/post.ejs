@@ -1,17 +1,15 @@
-<div class="columns">
-  <div class="column col-10">
-    <div class="book-post">
-      <%-page.content%>
-    </div>
-    <% if(page.comments != false) { %>
-      <div class="book-comments">
-        <%- partial('_partials/comments') %>
-      </div>
-    <% } %>
-  </div>
-  <div class="column col-2">
-    <%- partial('_partials/toc') %>
-  </div>
+<div class="book-navbar">
+  <%- partial('_partials/navbar') %>
 </div>
+
+<div class="book-post">
+  <%-page.content%>
+</div>
+
+<% if(page.comments != false) { %>
+  <div class="book-comments">
+    <%- partial('_partials/comments') %>
+  </div>
+<% } %>
 
 <%- js('/js/book-post') %>

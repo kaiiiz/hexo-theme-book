@@ -3,7 +3,14 @@
 
 .book-container {
   height: 100%;
-  padding: $padding-16 100px;
+
+  @media all and (min-width: $pc-media) {
+    padding: $padding-16 $padding-32;
+  }
+  @media all and (max-width: $pcs-media) {
+    padding: 0 $padding-16;
+  }
+  
   font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -30,6 +37,36 @@
 .home-post-excerpt {
   font-size: 14px;
   color: #858585;
+}
+
+// navbar (for responsive layout)
+
+.book-navbar {
+  padding: $padding-12 0;
+
+  @media all and (min-width: $pc-media) {
+    display: none;
+  }
+  @media all and (max-width: $pcs-media) {
+    display: block;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    ul {
+      margin: 0 0 0 .5rem;
+    }
+  }
+
+  .navbar-icon {
+    width: 25px;
+  }
+
+  .accordion-body {
+    margin: $padding-6 0;
+  }
+
 }
 
 // post

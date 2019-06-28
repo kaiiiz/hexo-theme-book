@@ -58,5 +58,5 @@ Jump into the theme folder, run `git pull`. If you use `/source/_data/book.yml`,
 * [ ] tooltips
 * [ ] local search
 * [ ] code copy
-* [ ] responsive layout
+* [x] responsive layout
 * [ ] footer
