@@ -52,11 +52,3 @@ comments: <boolean> (default: true)
 ## Update
 
 Jump into the theme folder, run `git pull`. If you use `/source/_data/book.yml`, please note the diffrence of updated `_config.yml`.
-
-## TODOs
-
-* [ ] tooltips
-* [ ] local search
-* [ ] code copy
-* [x] responsive layout
-* [ ] footer
