@@ -204,6 +204,10 @@
     margin-right: auto;
   }
 
+  iframe {
+    width: 100%;
+  }
+
   @import '_partial/highlight';
 }
 
