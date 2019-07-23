@@ -16,3 +16,16 @@ document.querySelectorAll('.book-post > table').forEach(function(table){
   parent.insertBefore(wrapper, table);
   wrapper.appendChild(table);
 })
+
+// add footnotes tooltips
+document.querySelectorAll('sup.footnote-ref').forEach(function(fn){
+  let parent = fn.parentNode;
+  let wrapper = document.createElement('span');
+  let link = fn.childNodes[0].getAttribute("href")  // #fn1
+  link = link.substr(1, link.length)                // fn1
+  let fn_content = document.getElementById(link).innerText.replace(/↩/g, '')
+  wrapper.className = 'tooltip'
+  wrapper.setAttribute("data-tooltip", fn_content)
+  parent.insertBefore(wrapper, fn);
+  wrapper.appendChild(fn);
+})
