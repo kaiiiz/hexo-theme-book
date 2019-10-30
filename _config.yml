@@ -5,6 +5,10 @@ favicon_url: favicon.ico
 google_analytics: # UA-XXXXX-Y
 
 comments:
+  utterances:
+    enable: false
+    user: # your github user name
+    repo: # your github repo name
   disqus:
     enable: false
     shortname: # your disqus shortname

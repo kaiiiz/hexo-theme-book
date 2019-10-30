@@ -10,7 +10,7 @@
   @media all and (max-width: $pcs-media) {
     padding: 0 $padding-16;
   }
-  
+
   font-family: 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans', sans-serif;
 }
 
@@ -18,7 +18,7 @@
   a {
     color: $book-link-color;
   }
-  
+
   a:hover {
     color: $book-link-hover-color;
   }
@@ -141,7 +141,7 @@
 
     table {
       width: 100%;
-      
+
       th, td {
         padding: $padding-12;
         border-top: 1px solid $border-color;
@@ -152,6 +152,8 @@
   }
 
   ul, ol {
+    list-style: outside;
+    margin-left: 1rem;
     ol {
       margin-top: 0;
       margin-bottom: 0;
@@ -235,19 +237,19 @@
       }
     }
   }
-  
+
   .toc-link::before {
     background-color: white !important;
   }
-  
+
   .is-active-link::before {
     background-color: $book-primary-color !important;
   }
-  
+
   .book-tocbot-menu {
     margin: $padding-16 $padding-12;
     font-size: $font-size-12;
-    
+
     a {
       display: block;
       margin: $padding-6 0;
@@ -269,7 +271,7 @@
     a {
       color: $book-primary-link-color;
     }
-    
+
     a:hover {
       color: $book-primary-link-color;
     }
@@ -293,7 +295,7 @@
   a {
     color: $book-primary-link-color;
   }
-  
+
   a:hover {
     color: $book-primary-link-hover-color;
   }

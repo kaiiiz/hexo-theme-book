@@ -1,3 +1,13 @@
+<% if(theme.comments.utterances.enable) { %>
+<script src="https://utteranc.es/client.js"
+        repo="<%= theme.comments.utterances.user %>/<%= theme.comments.utterances.repo %>"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+<% } %>
+
 <% if(theme.comments.disqus.enable) { %>
     <div id="disqus_thread"></div>
     <script>
