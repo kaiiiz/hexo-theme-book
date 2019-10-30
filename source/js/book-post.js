@@ -9,7 +9,7 @@ document.querySelectorAll('img').forEach(function(img){
 })
 
 // add table wrapper
-document.querySelectorAll('.book-post > table').forEach(function(table){
+document.querySelectorAll('.book-post table').forEach(function(table){
   let parent = table.parentNode;
   let wrapper = document.createElement('div');
   wrapper.className = 'table-wrapper'
