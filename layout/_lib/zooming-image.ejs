@@ -1,0 +1,9 @@
+<% if (theme.zoom_image && (page.zoom_image === undefined || page.zoom_image)){ %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    zooming.listen('img')
+})
+</script>
+<% } %>

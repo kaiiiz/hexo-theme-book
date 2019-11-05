@@ -3,13 +3,13 @@
 </div>
 
 <div class="book-post">
-  <%-page.content%>
+  <%- page.content %>
 </div>
 
-<% if(page.comments != false) { %>
+<% if(page.comments === undefined || page.comments) { %>
   <div class="book-comments">
-    <%- partial('_partials/comments') %>
+    <%- partial('_lib/comments') %>
   </div>
 <% } %>
 
-<%- js('/js/book-post') %>
+<%- js('js/book-post') %>

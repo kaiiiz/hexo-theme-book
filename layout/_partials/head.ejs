@@ -14,7 +14,7 @@
         <% } %>
     </title>
 
-    <!-- Spectre.css framework (v0.5.8) -->
+    <!-- Spectre.css framework -->
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
@@ -29,7 +29,7 @@
     <!-- theme css & js -->
     <%- css('css/spectre_custom') %>
     <%- css('css/book') %>
-    <%- js('/js/book') %>
+    <%- js('js/book') %>
 
     <!-- tocbot -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
@@ -43,5 +43,6 @@
     <!-- katex -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 
-    <%- partial('google-analytics') %>
+    <%- partial('_lib/google-analytics') %>
+    <%- partial('_lib/zooming-image') %>
 </head>

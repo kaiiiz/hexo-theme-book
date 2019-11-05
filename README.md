@@ -46,6 +46,7 @@ Copy the contents of `/themes/book/_config.yml` to `/source/_data/book.yml`, it 
 ---
 title: <string>
 comments: <boolean> (default: true)
+zoom_image: <boolean> (default: true)
 ---
 ```
 
