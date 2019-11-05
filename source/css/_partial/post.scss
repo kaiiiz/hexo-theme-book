@@ -22,7 +22,7 @@
   h4,
   h5,
   h6 {
-    margin-top: 1.25rem;
+    margin-top: 1.6rem;
   }
 
   h1 {
@@ -38,19 +38,19 @@
   }
 
   h4 {
-    font-size: $font-size-large;
-  }
-
-  h5 {
     font-size: $font-size-medium;
   }
 
-  h6 {
+  h5 {
     font-size: $font-size-small;
   }
 
+  h6 {
+    font-size: $font-size-smaller;
+  }
+
   p {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
   }
 
   hr {
@@ -78,8 +78,8 @@
 
   ul,
   ol {
-    list-style: outside;
-    margin-left: 1rem;
+    list-style-position: outside;
+    margin: 0 0 1.4rem 2rem;
 
     ol {
       margin-top: 0;
