@@ -5,6 +5,11 @@ favicon_url: favicon.ico
 google_analytics: # UA-XXXXX-Y
 zoom_image: true
 
+codeblock:
+  # Code Highlight theme
+  # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
+  highlight_theme: normal
+
 comments:
   utterances:
     enable: false
