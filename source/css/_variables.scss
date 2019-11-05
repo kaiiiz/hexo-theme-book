@@ -2,31 +2,21 @@ $book-primary-color: #004ed0;
 $book-primary-link-color: rgb(47, 47, 47);
 $book-primary-link-hover-color: rgb(128, 128, 128);
 $book-link-color: #004ed0;
+$book-link-visited-color: #7170db;
 $book-link-hover-color: rgb(109, 109, 109);
 $border-color: #ddd;
 
-$padding-1: 1px;
-$padding-4: 0.25rem;
-$padding-6: 0.375rem;
-$padding-8: 0.5rem;
-$padding-10: 0.625rem;
-$padding-12: 0.75rem;
-$padding-14: 0.875rem;
-$padding-16: 1rem;
-$padding-20: 1.25rem;
-$padding-24: 1.5rem;
-$padding-32: 2rem;
-
-$font-size-base: 16px;
-$font-size-10: 0.625rem;
-$font-size-12: 0.75rem;
-$font-size-14: 0.875rem;
-$font-size-16: 1rem;
-$font-size-18: 1.125rem;
-$font-size-20: 1.25rem;
-$font-size-22: 1.375rem;
-$font-size-24: 1.5rem;
-$font-size-32: 2rem;
+// font size
+$font-size-base           : 1rem;
+$font-size-min            : .625rem;
+$font-size-smallest       : .75rem;
+$font-size-smaller        : .8125rem;
+$font-size-small          : .875rem;
+$font-size-medium         : 1rem;
+$font-size-large          : 1.125rem;
+$font-size-larger         : 1.25rem;
+$font-size-largest        : 1.375rem;
+$font-size-max            : 1.5rem;
 
 $pc-media:960px;
 $pcs-media:959px;

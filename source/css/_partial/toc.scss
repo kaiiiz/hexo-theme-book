@@ -1,0 +1,46 @@
+.book-toc {
+  position: fixed;
+  font-size: $font-size-small;
+  width: 100%;
+
+  .book-tocbot {
+    max-height: 450px;
+    max-width: 250px;
+    overflow: auto;
+    position: relative;
+    padding-right: 0.875rem;
+
+    ul {
+      list-style: none;
+      position: inherit;
+      overflow: hidden;
+
+      li {
+        margin-left: 0.25rem;
+      }
+    }
+  }
+
+  .toc-link::before {
+    background-color: white !important;
+  }
+
+  .is-active-link::before {
+    background-color: $book-primary-color !important;
+  }
+
+  .book-tocbot-menu {
+    margin: 1rem 0.75rem;
+
+    a {
+      display: block;
+      margin: 0.375rem 0;
+      color: #999;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: gray;
+    }
+  }
+}

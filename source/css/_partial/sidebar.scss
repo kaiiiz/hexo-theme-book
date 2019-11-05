@@ -1,0 +1,41 @@
+.book-sidebar {
+  .site-meta {
+    font-size: $font-size-max;
+    margin-bottom: 0.875rem;
+
+    a {
+      color: $book-primary-link-color;
+    }
+
+    a:hover {
+      color: $book-primary-link-color;
+    }
+  }
+
+  .sidebar-content {
+    padding-right: 1rem;
+    display: none;
+    ul {
+      list-style: none;
+      margin-left: 0;
+      ul {
+        margin: 0 0 0 0.5rem;
+      }
+    }
+    .icon {
+      vertical-align: unset;
+    }
+  }
+
+  a {
+    color: $book-primary-link-color;
+  }
+
+  a:hover {
+    color: $book-primary-link-hover-color;
+  }
+
+  .book-sidebar-current {
+    color: $book-primary-color;
+  }
+}
