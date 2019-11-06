@@ -15,6 +15,7 @@ comments:
     enable: false
     user: # your github user name
     repo: # your github repo name
+    theme: github-light # github-light | github-dark | github-dark-orange | icy-dark | dark-blue | photon-dark
   disqus:
     enable: false
     shortname: # your disqus shortname
