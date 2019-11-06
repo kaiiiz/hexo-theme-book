@@ -2,8 +2,8 @@ home_page: home.md # filename under /source/_posts/
 menu_page: menu.md # filename under /source/_posts/
 
 favicon_url: favicon.ico
-google_analytics: # UA-XXXXX-Y
 zoom_image: true
+collapse_depth: 2
 
 codeblock:
   # Code Highlight theme
@@ -28,3 +28,5 @@ comments:
     adminUser: # GitHub repository owner and collaborators
     labels: 'gitalk' # GitHub issue labels
     distractionFreeMode: true
+
+google_analytics: # UA-XXXXX-Y
