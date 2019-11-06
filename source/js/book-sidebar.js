@@ -8,6 +8,7 @@ function collapse_sidebar(depth) {
     document.querySelectorAll(selector).forEach(function(li){
         let ul = li.querySelector('ul');
         if(ul){
+            // accordion
             var accordion = document.createElement('div');
             accordion.setAttribute("class", "accordion");
 
@@ -16,6 +17,16 @@ function collapse_sidebar(depth) {
             checkbox.setAttribute("id", "accordion-" + i);
             checkbox.setAttribute("hidden", "");
 
+            var acco_body = document.createElement('div');
+            acco_body.setAttribute("class", "accordion-body")
+            acco_body.appendChild(ul);
+
+            accordion.appendChild(checkbox);
+            accordion.appendChild(acco_body);
+
+            li.parentNode.appendChild(accordion);
+
+            // create label
             var label = document.createElement('label');
             label.setAttribute("class", "accordion-header c-hand");
             label.setAttribute("for", "accordion-" + i);
@@ -23,14 +34,23 @@ function collapse_sidebar(depth) {
             icon.setAttribute("class", "icon icon-caret");
             label.appendChild(icon);
 
-            var acco_body = document.createElement('div');
-            acco_body.setAttribute("class", "accordion-body")
-            acco_body.appendChild(ul);
+            // create title span
+            var title = document.createElement('span');
+            title.innerHTML = li.innerHTML;
+            title.setAttribute("class", "collapse-span");
+            title.onmouseover = function() {
+                title.classList.toggle('show')
+            }
+            title.onmouseout = function() {
+                title.classList.toggle('show')
+            }
 
-            accordion.appendChild(checkbox);
-            accordion.appendChild(acco_body);
+            // append title and label
+            li.innerHTML = "";
+            li.setAttribute('class', 'collapse-li');
+            li.appendChild(title);
             li.appendChild(label);
-            li.appendChild(accordion);
+
             i++;
         }
     })

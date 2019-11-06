@@ -27,6 +27,24 @@
     }
   }
 
+  .collapse-li {
+    display: flex;
+    align-items: center;
+  }
+
+  .collapse-span {
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    padding-right: 2px;
+  }
+
+  .show {
+    white-space: normal;
+    overflow-x: unset;
+  }
+
   a {
     color: $book-primary-link-color;
   }
