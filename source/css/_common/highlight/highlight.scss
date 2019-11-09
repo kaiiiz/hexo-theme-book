@@ -18,6 +18,7 @@ $highlight-theme: hexo-theme-config("codeblock.highlight_theme");
 }
 
 code {
+  font-family: $code-font-family;
   border-radius: $code-border-radius;
   padding: 2px 4px;
   overflow-wrap: break-word;
