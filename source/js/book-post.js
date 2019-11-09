@@ -4,7 +4,7 @@ document.querySelectorAll('img').forEach(function(img){
     let parent = img.parentNode;
     let figcaption = document.createElement('figcaption');
     figcaption.innerHTML = img.getAttribute('alt');
-    parent.appendChild(figcaption);
+    parent.insertBefore(figcaption, img.nextSibling);
   }
 })
 
