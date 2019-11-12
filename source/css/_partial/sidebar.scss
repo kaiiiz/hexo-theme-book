@@ -13,6 +13,7 @@
   }
 
   .sidebar-content {
+    font-size: $font-size-small;
     padding-right: 1rem;
     display: none;
     ul {
@@ -29,7 +30,7 @@
 
   .collapse-li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .collapse-span {

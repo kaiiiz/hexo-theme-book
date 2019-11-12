@@ -24,7 +24,7 @@ function collapse_sidebar(depth) {
             accordion.appendChild(checkbox);
             accordion.appendChild(acco_body);
 
-            li.parentNode.appendChild(accordion);
+            li.parentNode.insertBefore(accordion, li.nextSibling);
 
             // create label
             var label = document.createElement('label');
