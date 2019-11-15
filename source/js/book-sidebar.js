@@ -1,13 +1,13 @@
 // collapse sidebar
 function collapse_sidebar(depth) {
     selector = '.book-sidebar > .sidebar-content'
-    for (let i = 0; i < depth; i++){
+    for (let i = 0; i < depth; i++) {
         selector += "> ul > li";
     }
     let i = 0;
-    document.querySelectorAll(selector).forEach(function(li){
+    document.querySelectorAll(selector).forEach(function (li) {
         let ul = li.querySelector('ul');
-        if(ul){
+        if (ul) {
             // accordion
             var accordion = document.createElement('div');
             accordion.setAttribute("class", "accordion");
@@ -38,10 +38,10 @@ function collapse_sidebar(depth) {
             var title = document.createElement('span');
             title.innerHTML = li.innerHTML;
             title.setAttribute("class", "collapse-span");
-            title.onmouseover = function() {
+            title.onmouseover = function () {
                 title.classList.toggle('show')
             }
-            title.onmouseout = function() {
+            title.onmouseout = function () {
                 title.classList.toggle('show')
             }
 
@@ -58,23 +58,24 @@ function collapse_sidebar(depth) {
 
 // highlight current tab
 function highlight_tab() {
-    document.querySelectorAll('.sidebar-content a').forEach(function(item){
-        if(item.href === window.location.href || item.href === window.location.href.slice(0, -1)) {
+    document.querySelectorAll('.sidebar-content a').forEach(function (item) {
+        if (!item.getAttribute('href')) return // if href has no value
+        if (item.href === window.location.href || item.href === window.location.href.slice(0, -1)) {
             item.className = "book-sidebar-current";
             var parent = item.parentNode;
-            while(parent.className != "sidebar-content") {
-                if(parent.className == "accordion") {
+            while (parent.className != "sidebar-content") {
+                if (parent.className == "accordion") {
                     break;
                 }
                 parent = parent.parentNode;
             }
-            if(parent.className == "accordion") {
+            if (parent.className == "accordion") {
                 parent.querySelector('input').setAttribute("checked", "");
             }
         }
     })
 }
 
-function show_sidebar(){
+function show_sidebar() {
     document.getElementsByClassName("sidebar-content")[0].style.display = "block";
 }
