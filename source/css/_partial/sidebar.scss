@@ -12,7 +12,7 @@
     }
   }
 
-  .sidebar-content {
+  .menu-content {
     font-size: $font-size-small;
     padding-right: 1rem;
     display: none;
@@ -54,7 +54,7 @@
     color: $book-primary-link-hover-color;
   }
 
-  .book-sidebar-current {
+  .book-menu-current {
     color: $book-primary-color;
   }
 }

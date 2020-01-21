@@ -1,7 +1,8 @@
 home_page: home.md # filename under /source/_posts/
 menu_page: menu.md # filename under /source/_posts/
 
-favicon_url: favicon.ico
+author_img: favicon.ico # file path of author image
+favicon_url: favicon.ico # file path of favicon
 zoom_image: true
 collapse_depth: 2
 

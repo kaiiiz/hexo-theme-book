@@ -1,6 +1,6 @@
-// collapse sidebar
-function collapse_sidebar(depth) {
-    selector = '.book-sidebar > .sidebar-content'
+// collapse menu
+function collapse_menu(depth) {
+    selector = '.book-sidebar > .menu-content'
     for (let i = 0; i < depth; i++) {
         selector += "> ul > li";
     }
@@ -58,12 +58,12 @@ function collapse_sidebar(depth) {
 
 // highlight current tab
 function highlight_tab() {
-    document.querySelectorAll('.sidebar-content a').forEach(function (item) {
+    document.querySelectorAll('.menu-content a').forEach(function (item) {
         if (!item.getAttribute('href')) return // if href has no value
         if (item.href === window.location.href || item.href === window.location.href.slice(0, -1)) {
-            item.className = "book-sidebar-current";
+            item.className = "book-menu-current";
             var parent = item.parentNode;
-            while (parent.className != "sidebar-content") {
+            while (parent.className != "menu-content") {
                 if (parent.className == "accordion") {
                     break;
                 }
@@ -76,6 +76,6 @@ function highlight_tab() {
     })
 }
 
-function show_sidebar() {
-    document.getElementsByClassName("sidebar-content")[0].style.display = "block";
+function show_menu() {
+    document.getElementsByClassName("menu-content")[0].style.display = "block";
 }

@@ -46,8 +46,8 @@ function go_bottom() {
 // post metadata
 window.onscroll = () => {
     var scrollY = window.scrollY
-    var sidebar = document.querySelector('.sidebar-content')
-    var thold = sidebar.offsetTop + sidebar.offsetHeight
+    var menu = document.querySelector('.menu-content')
+    var thold = menu.offsetTop + menu.offsetHeight
     var meta = document.querySelector('.book-post-meta');
     if (scrollY > thold) {
         meta.classList.add('hide')

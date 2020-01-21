@@ -45,7 +45,9 @@ Copy the contents of `/themes/book/_config.yml` to `/source/_data/book.yml`, it 
 ```
 ---
 title: <string>
-author: <string> (default: _config.yml/author)
+post_meta: <boolean> (default: true)
+author: <string> (default: site's _config.yml/author)
+author_img: <string> (default: theme's _config.yml/author_img)
 comments: <boolean> (default: true)
 zoom_image: <boolean> (default: true)
 ---

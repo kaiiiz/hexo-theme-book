@@ -1,4 +1,4 @@
-.book-toc-wrapper {
+.book-post-info-wrapper {
   position: fixed;
   font-size: $font-size-small;
   width: 100%;
@@ -43,15 +43,11 @@
       color: gray;
     }
   }
-}
-
-.book-post-meta-wrapper {
-  bottom: 1rem;
-  width: 100%;
 
   .book-post-meta {
     max-width: 250px;
-    max-height: 500px;
+    max-height: 300px;
+    overflow: auto;
     display: block;
     opacity: 1;
     transition: max-height 0.15s ease-in;
@@ -73,7 +69,7 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        margin-left: 6px;
+        margin-left: 8px;
       }
     }
 

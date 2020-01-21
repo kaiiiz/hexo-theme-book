@@ -2,15 +2,13 @@
   <h4 class="site-meta">
     <a href="<%= config.root %>"><%= config.title %></a>
   </h4>
-  <div class="sidebar-content">
-    <%- sidebar %>
-  </div>
+  <%- partial('_components/menu') %>
 </div>
 
 <%- js('js/book-sidebar') %>
 
 <script>
-collapse_sidebar(<%= theme.collapse_depth %>)
+collapse_menu(<%= theme.collapse_depth %>)
 highlight_tab()
-show_sidebar()
+show_menu()
 </script>
