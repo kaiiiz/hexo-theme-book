@@ -46,19 +46,20 @@
 }
 
 .book-post-meta-wrapper {
-  position: fixed;
   bottom: 1rem;
   width: 100%;
 
   .book-post-meta {
     max-width: 250px;
+    max-height: 500px;
     display: block;
     opacity: 1;
-    -webkit-transition: opacity 0.3s ease-in-out;
-    -moz-transition: opacity 0.3s ease-in-out;
-    -ms-transition: opacity 0.3s ease-in-out;
-    -o-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3 ease-in-out;
+    transition: max-height 0.15s ease-in;
+    -webkit-transition: opacity 0.15s ease-in;
+    -moz-transition: opacity 0.15s ease-in;
+    -ms-transition: opacity 0.15s ease-in;
+    -o-transition: opacity 0.15s ease-in;
+    transition: opacity 0.15s ease-in;
 
     .author {
       display: flex;
@@ -76,12 +77,22 @@
       }
     }
 
-    .content {
-      font-size: 1rem;
+    .link {
+      font-size: $font-size-small;
+
+      a {
+        color: rgb(59, 67, 81);
+      }
+
+      a:hover {
+        color: rgb(128, 128, 128);
+      }
     }
   }
 
   .book-post-meta.hide {
     opacity: 0;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
   }
 }

@@ -12,15 +12,29 @@
       <!-- Author title -->
       <div class="author-title">
         <div><%= page.author ? page.author : config.author %></div>
-        <div><%= page.date.format(config.date_format) %></div>
+        <div><%= page.date ? page.date.format(config.date_format) : "" %></div>
       </div>
     </div>
 
     <div class="divider"></div>
 
-    <div class="content">
+    <div class="link">
+      <%- list_categories(page.categories, {
+          show_count: false,
+          style: 'none',
+          separator: ' '
+      }) %>
 
+      <%- list_tags(page.tags, {
+          show_count: false,
+          style: 'none',
+          separator: ' ',
+          transform(str) {
+            return "#" + str
+          }
+      }) %>
     </div>
 
+    <div class="divider"></div>
   </div>
 </div>
