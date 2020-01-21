@@ -48,8 +48,40 @@
 .book-post-meta-wrapper {
   position: fixed;
   bottom: 1rem;
+  width: 100%;
+
+  .book-post-meta {
+    max-width: 250px;
+    display: block;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3 ease-in-out;
+
+    .author {
+      display: flex;
+
+      .author-img {
+        display: flex;
+        align-items: center;
+      }
+
+      .author-title {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 6px;
+      }
+    }
+
+    .content {
+      font-size: 1rem;
+    }
+  }
 
   .book-post-meta.hide {
-    display: none;
+    opacity: 0;
   }
 }

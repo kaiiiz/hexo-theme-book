@@ -1,5 +1,26 @@
 <div class="book-post-meta-wrapper">
   <div class="book-post-meta">
-    <div>Author: <%= page.author ? page.author : config.author %></div>
+
+    <div class="author">
+      <!-- Author image -->
+      <div class="author-img">
+        <figure class="avatar avatar-xl">
+          <img src="<%= url_for('andy.png') %>" alt="...">
+        </figure>
+        <!-- <figure class="avatar avatar-xl" data-initial="Y" style="background-color: #5755d9;"></figure> -->
+      </div>
+      <!-- Author title -->
+      <div class="author-title">
+        <div><%= page.author ? page.author : config.author %></div>
+        <div><%= page.date.format(config.date_format) %></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="content">
+
+    </div>
+
   </div>
 </div>
