@@ -1,4 +1,4 @@
-.book-toc {
+.book-toc-wrapper {
   position: fixed;
   font-size: $font-size-small;
   width: 100%;
@@ -42,5 +42,14 @@
     a:hover {
       color: gray;
     }
+  }
+}
+
+.book-post-meta-wrapper {
+  position: fixed;
+  bottom: 1rem;
+
+  .book-post-meta.hide {
+    display: none;
   }
 }
