@@ -1,4 +1,4 @@
-$start-padding: 1.5rem;
+$start-padding: 1.25rem;
 $end-padding: .6rem;
 
 .book-brand {
@@ -33,8 +33,8 @@ $end-padding: .6rem;
 }
 
 .book-menu {
-  $depth: 0.6rem;
-  $spacing: 0.675rem;
+  $depth: 0.5rem;
+  $spacing: 0.625rem;
 
   position: fixed;
   top: 3.25rem;
@@ -42,11 +42,12 @@ $end-padding: .6rem;
   width: $menu-width;
   overflow-x: hidden;
   overflow-y: auto;
+  font-size: $font-size-smaller;
 
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: $spacing * 2 $end-padding $spacing $start-padding;
-    font-size: $font-size-small;
+    font-size: $font-size-smaller;
   }
 
   ul, ol, li {

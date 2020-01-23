@@ -74,7 +74,6 @@ document.querySelectorAll('.book-menu a').forEach((item) => {
             parent = parent.parentNode;
         }
         if (parent.className == "accordion") {
-            parent.classList.add('current-tab')
             parent.querySelector('input').setAttribute("checked", "");
         }
     }
