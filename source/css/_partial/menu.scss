@@ -34,12 +34,12 @@ $end-padding: .6rem;
 
 .book-menu {
   $depth: 0.6rem;
-  $spacing: 0.65rem;
+  $spacing: 0.675rem;
 
   position: fixed;
-  top: 3.5rem;
+  top: 3.25rem;
   bottom: 0rem;
-  width: 13rem;
+  width: $menu-width;
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -96,9 +96,15 @@ $end-padding: .6rem;
 
   a {
     color: $book-primary-link-color;
+    font-weight: 400;
   }
 
   a:hover {
     color: $book-primary-link-hover-color;
+  }
+
+  .current-tab {
+    color: $book-primary-color;
+    font-weight: 600;
   }
 }

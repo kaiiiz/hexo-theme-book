@@ -21,7 +21,7 @@ body {
 
 .book-sidebar {
   position: fixed;
-  width: 13rem;
+  width: $menu-width;
   height: 100%;
   background-color: #f7f8f9;
 
@@ -32,7 +32,7 @@ body {
   height: 100%;
 
   @media all and (min-width: $pc-media) {
-    margin-left: 13rem;
+    margin-left: $menu-width;
     padding: 2rem 3rem;
   }
   @media all and (max-width: $pcs-media) {
