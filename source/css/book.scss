@@ -11,7 +11,6 @@
 }
 
 html, body {
-  height: 100%;
   margin: 0;
   font-size: $font-size-base;
 }
@@ -20,9 +19,11 @@ html, body {
   flex: 0 0 auto;
   width: 12rem;
   background-color: #f7f8f9;
+
+  @import '_partial/menu';
 }
 
-.book-content {
+.off-canvas-content {
   flex: 1 1 auto;
   height: 100%;
 
@@ -36,7 +37,8 @@ html, body {
   font-family: 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans', sans-serif;
 }
 
-.book-post {
+.book-content {
+  overflow-y: auto;
   margin-left: 0.4rem;
 
   @import '_partial/post';
@@ -71,6 +73,5 @@ img {
 @import '_partial/navbar';
 @import '_partial/toc';
 // @import '_partial/sidebar';
-@import '_partial/menu';
 @import '_partial/comments';
 @import '_common/highlight/highlight.scss'

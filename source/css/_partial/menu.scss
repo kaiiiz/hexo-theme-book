@@ -1,43 +1,41 @@
-.book-sidebar {
-  .book-brand {
-    display: flex;
-    position: fixed;
-    top: .85rem;
-    left: 1.5rem;
-    height: 2rem;
+.book-brand {
+  display: flex;
+  position: fixed;
+  top: .85rem;
+  left: 1.5rem;
+  height: 2rem;
 
-    a {
-      padding: .2rem;
-      display: inline-flex;
-      align-items: center;
-      font-size: .8rem;
-      font-weight: bold;
-      color: $book-primary-link-color;
-      text-decoration: none;
+  a {
+    padding: .2rem;
+    display: inline-flex;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: bold;
+    color: $book-primary-link-color;
+    text-decoration: none;
 
-      img {
-        height: 1.6rem;
-        width: 1.6rem;
-      }
-
-      span {
-        margin-left: .5rem;
-      }
+    img {
+      height: 1.6rem;
+      width: 1.6rem;
     }
 
-    a:hover {
-      color: $book-primary-link-color;
-      text-decoration: none;
+    span {
+      margin-left: .5rem;
     }
   }
 
-  .book-menu {
-    position: fixed;
-    top: 3.5rem;
-    bottom: 1.5rem;
-    width: 12rem;
-
-    padding: 0 1.5rem;
-    overflow-y: auto;
+  a:hover {
+    color: $book-primary-link-color;
+    text-decoration: none;
   }
+}
+
+.book-menu {
+  position: fixed;
+  top: 3.5rem;
+  bottom: 1.5rem;
+  width: 12rem;
+
+  padding: 0 1.5rem;
+  overflow-y: auto;
 }
