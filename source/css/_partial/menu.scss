@@ -1,5 +1,5 @@
 $start-padding: 1.5rem;
-$end-padding: .5rem;
+$end-padding: .6rem;
 
 .book-brand {
   display: flex;
@@ -33,7 +33,8 @@ $end-padding: .5rem;
 }
 
 .book-menu {
-  $depth-diff: 0.6rem;
+  $depth: 0.6rem;
+  $spacing: 0.65rem;
 
   position: fixed;
   top: 3.5rem;
@@ -44,7 +45,7 @@ $end-padding: .5rem;
 
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    padding: 0 $end-padding 0 $start-padding;
+    padding: $spacing * 2 $end-padding $spacing $start-padding;
     font-size: $font-size-small;
   }
 
@@ -53,13 +54,14 @@ $end-padding: .5rem;
     list-style: none;
   }
 
-  > .book-nav {
+  .uncollapsible {
     padding: 0 $end-padding 0 $start-padding;
     margin: 0;
   }
 
   .accordion {
-    padding: 0 $end-padding 0 $start-padding;
+    padding: $spacing $end-padding $spacing $start-padding;
+    border-top: 1px solid rgb(231, 231, 231);
 
     label {
       display: flex;
@@ -67,7 +69,11 @@ $end-padding: .5rem;
       justify-content: space-between;
       padding: 0;
     }
-  
+
+    .accordion-body {
+      margin: 0;
+    }
+
     input:checked~.accordion-header .icon {
       transform: rotate(-180deg);
     }
@@ -79,24 +85,20 @@ $end-padding: .5rem;
       width: 0.3rem;
     }
   }
-  
-  // .book-nav .book-nav {
-  //   margin-left: $depth-diff;
-  // }
 
-  // .book-nav-collapsable > li {
-  //   margin-left: $depth-diff;
-  // }
+  ul {
+    margin-left: $depth;
+  }
 
-  // .book-nav-item {
-  //   margin-top: .5rem;
+  li {
+    margin-top: $spacing;
+  }
 
-  //   :last-child {
-  //     margin-bottom: 1rem;
-  //   }
-  // }
+  a {
+    color: $book-primary-link-color;
+  }
 
-  .border {
-    border-top: 1px solid rgb(231, 231, 231);
+  a:hover {
+    color: $book-primary-link-hover-color;
   }
 }

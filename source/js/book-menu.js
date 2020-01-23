@@ -1,9 +1,17 @@
 function collapse(name, body, i) {
+    if (name.classList.contains('accordion')) {
+        var acco_body = name.querySelector('.accordion-body');
+        acco_body.appendChild(body);
+        return name;
+    }
+
     var accordion = document.createElement('div');
     accordion.setAttribute("class", "accordion");
-    
-    body.classList.add('accordion-body');
-    
+
+    var acco_body = document.createElement('div');
+    acco_body.setAttribute("class", "accordion-body");
+    acco_body.appendChild(body);
+
     var checkbox = document.createElement('input');
     checkbox.setAttribute("type", "checkbox");
     checkbox.setAttribute("id", "accordion-" + i);
@@ -20,35 +28,34 @@ function collapse(name, body, i) {
 
     accordion.appendChild(checkbox);
     accordion.appendChild(label);
-    accordion.appendChild(body);
+    accordion.appendChild(acco_body);
 
     name.parentNode.replaceChild(accordion, name);
 
     return accordion;
 }
 
+// clear invalid syntax
+document.querySelectorAll('.book-menu > :not(ul):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6)').forEach((e) => {
+    e.parentNode.removeChild(e);
+})
+
+// pack accordion
 document.querySelectorAll('.book-menu > ul').forEach((e, idx) => {
-    var sibling = e.previousElementSibling
+    var sibling = e.previousElementSibling;
     while (sibling != null) {
         if (sibling.tagName == "H1" || sibling.tagName == "H2" ||
             sibling.tagName == "H3" || sibling.tagName == "H4" ||
-            sibling.tagName == "H5" || sibling.tagName == "H6") {
+            sibling.tagName == "H5" || sibling.tagName == "H6" ||
+            sibling.classList.contains('accordion')) {
             break;
         }
-        sibling = sibling.previousElementSibling
+        sibling = sibling.previousElementSibling;
     }
-    // e is collapsable
     if (sibling) {
-        // e.classList.add('book-nav-collapsable')
         accordion = collapse(sibling, e, idx);
-        accordion.classList.add('border')
     }
-})
-
-document.querySelectorAll('.book-menu ul').forEach((e) => {
-    e.classList.add('book-nav')
-})
-
-document.querySelectorAll('.book-menu li').forEach((e) => {
-    e.classList.add('book-nav-item')
+    else {
+        e.classList.add('uncollapsible');
+    }
 })
