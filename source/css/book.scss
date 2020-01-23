@@ -3,31 +3,36 @@
 .book-container {
   width: 100%;
   height: 100%;
-  display: flex;
 }
 
 .columns {
   height: 100%;
 }
 
-html, body {
+html {
   margin: 0;
+  height: 100%;
   font-size: $font-size-base;
 }
 
+body {
+  font-size: $font-size-small;
+}
+
 .book-sidebar {
-  flex: 0 0 auto;
-  width: 12rem;
+  position: fixed;
+  width: 13rem;
+  height: 100%;
   background-color: #f7f8f9;
 
   @import '_partial/menu';
 }
 
 .off-canvas-content {
-  flex: 1 1 auto;
   height: 100%;
 
   @media all and (min-width: $pc-media) {
+    margin-left: 13rem;
     padding: 2rem 3rem;
   }
   @media all and (max-width: $pcs-media) {
@@ -38,7 +43,6 @@ html, body {
 }
 
 .book-content {
-  overflow-y: auto;
   margin-left: 0.4rem;
 
   @import '_partial/post';
