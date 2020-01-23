@@ -45,14 +45,20 @@ function go_bottom() {
 
 // post metadata
 window.onscroll = () => {
-    var scrollY = window.scrollY
-    var menu = document.querySelector('.menu-content')
-    var thold = menu.offsetTop + menu.offsetHeight
+    var scrollY = window.scrollY;
+    var menu = document.querySelector('.book-menu');
     var meta = document.querySelector('.book-post-meta');
-    if (scrollY > thold) {
+    var tocbot = document.querySelector('.book-tocbot');
+    var thold = menu.offsetTop + menu.offsetHeight;
+    if (meta == null) {
+        tocbot.style.maxHeight = "450px"
+    }
+    else if (scrollY > thold) {
         meta.classList.add('hide')
+        tocbot.style.maxHeight = "450px"
     }
     else {
         meta.classList.remove('hide')
+        tocbot.style.maxHeight = "350px"
     }
 }

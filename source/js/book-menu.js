@@ -63,8 +63,13 @@ document.querySelectorAll('.book-menu > ul').forEach((e, idx) => {
 // highlight current tab
 document.querySelectorAll('.book-menu a').forEach((item) => {
     if (!item.getAttribute('href')) return // if href has no value
-    console.log(item.href, window.location.href)
-    if (item.href === window.location.href || item.href === window.location.href.slice(0, -1)) {
+    // normalized url
+    let sharp = window.location.href.search('#');
+    let url = window.location.href.slice(0, sharp);
+    if (url.slice(-1) == '/') {
+        url = url.slice(0, -1);
+    }
+    if (item.href === url) {
         item.classList.add('current-tab')
         var parent = item.parentNode;
         while (parent.className != "book-menu") {

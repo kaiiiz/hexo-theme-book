@@ -1,14 +1,17 @@
 .book-post-info-wrapper {
+  $max-width: 200px;
+
   position: fixed;
-  font-size: $font-size-small;
+  font-size: $font-size-smaller;
   width: 100%;
 
   .book-tocbot {
-    max-height: 450px;
-    max-width: 250px;
+    max-height: 350px;
+    max-width: $max-width;
     overflow: auto;
     position: relative;
     padding-right: 0.875rem;
+    transition: max-height 0.2s ease-out;
 
     ul {
       list-style: none;
@@ -45,16 +48,13 @@
   }
 
   .book-post-meta {
-    max-width: 250px;
-    max-height: 300px;
+    font-size: $font-size-smaller;
+    max-width: $max-width;
+    max-height: 150px;
     overflow: auto;
     display: block;
     opacity: 1;
     transition: max-height 0.15s ease-in;
-    -webkit-transition: opacity 0.15s ease-in;
-    -moz-transition: opacity 0.15s ease-in;
-    -ms-transition: opacity 0.15s ease-in;
-    -o-transition: opacity 0.15s ease-in;
     transition: opacity 0.15s ease-in;
 
     .author {
@@ -74,7 +74,6 @@
     }
 
     .link {
-      font-size: $font-size-small;
 
       a {
         color: rgb(59, 67, 81);

@@ -5,16 +5,16 @@
     <!-- Author image -->
     <div class="author-img">
       <% if (page.author_img) { %>
-        <figure class="avatar avatar-xl">
+        <figure class="avatar avatar-lg">
           <img src="<%- url_for(page.author_img) %>" alt="...">
         </figure>
       <% } else if (theme.author_img) { %>
-        <figure class="avatar avatar-xl">
+        <figure class="avatar avatar-lg">
           <img src="<%- url_for(theme.author_img) %>" alt="...">
         </figure>
       <% } else { %>
         <figure
-          class="avatar avatar-xl"
+          class="avatar avatar-lg"
           data-initial="<%= page.author ? page.author[0] : config.author[0] %>"
           style="background-color: #3b4351;">
         </figure>

@@ -40,12 +40,16 @@ body {
   }
 
   font-family: 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans', sans-serif;
+
+  @import '_partial/toc';
 }
 
 .book-content {
   margin-left: 0.4rem;
 
+  @import '_partial/navbar';
   @import '_partial/post';
+  @import '_partial/comments';
 }
 
 a {
@@ -74,8 +78,4 @@ img {
   text-align: left;
 }
 
-@import '_partial/navbar';
-@import '_partial/toc';
-// @import '_partial/sidebar';
-@import '_partial/comments';
 @import '_common/highlight/highlight.scss'
