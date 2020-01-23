@@ -1,7 +1,9 @@
 @import 'variables';
 
-.container {
+.book-container {
+  width: 100%;
   height: 100%;
+  display: flex;
 }
 
 .columns {
@@ -14,7 +16,14 @@ html, body {
   font-size: $font-size-base;
 }
 
-.book-container {
+.book-sidebar {
+  flex: 0 0 auto;
+  width: 12rem;
+  background-color: #f7f8f9;
+}
+
+.book-content {
+  flex: 1 1 auto;
   height: 100%;
 
   @media all and (min-width: $pc-media) {
@@ -27,7 +36,7 @@ html, body {
   font-family: 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans', sans-serif;
 }
 
-.book-content {
+.book-post {
   margin-left: 0.4rem;
 
   @import '_partial/post';
@@ -61,6 +70,7 @@ img {
 
 @import '_partial/navbar';
 @import '_partial/toc';
-@import '_partial/sidebar';
+// @import '_partial/sidebar';
+@import '_partial/menu';
 @import '_partial/comments';
 @import '_common/highlight/highlight.scss'
