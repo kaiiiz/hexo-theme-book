@@ -1,4 +1,4 @@
-function hide_sidebar() {
+function hide_canvas() {
     let sidebar = document.querySelector('.book-sidebar')
     let overlay = document.querySelector('.off-canvas-overlay')
     sidebar.classList.remove('show')

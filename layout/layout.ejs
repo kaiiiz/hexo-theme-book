@@ -12,25 +12,23 @@
   </div>
 
   <div class="off-canvas-content">
+    <div class="book-navbar">
+      <%- partial('_partials/navbar') %>
+    </div>
+
     <div class="columns">
-
-      <div class="column col-10 col-xl-12">
-        <div class="book-navbar">
-          <%- partial('_partials/navbar') %>
-        </div>
-
+      <div class="column col-10 col-lg-12">
         <div class="book-content">
           <%- body %>
         </div>
       </div>
-
-      <div class="column col-2 hide-xl">
+      <div class="column col-2 hide-lg">
         <%- partial('_partials/post-info') %>
       </div>
     </div>
   </div>
   
-  <a class="off-canvas-overlay" onclick="hide_sidebar()"></a>
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
 </div>
 
 </body>

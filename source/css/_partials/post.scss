@@ -1,9 +1,9 @@
 .book-post {
-  @media all and (min-width: $pc-media) {
+  @media all and (min-width: $pad-media) {
     max-width: 95%;
   }
 
-  @media all and (max-width: $pcs-media) {
+  @media all and (max-width: $pads-media) {
     max-width: 100%;
   }
 

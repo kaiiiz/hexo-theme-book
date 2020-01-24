@@ -78,14 +78,23 @@ body {
 
   font-family: 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans', sans-serif;
 
-  @import '_partials/toc';
-}
+  .book-content {
+    margin-left: 0.4rem;
+  
+    @import '_partials/post';
+    @import '_components/comments';
+  }
 
-.book-content {
-  margin-left: 0.4rem;
+  .book-post-info {
+    $post-info-max-width: 200px;
+  
+    position: fixed;
+    font-size: $font-size-smaller;
+    width: 100%;
 
-  @import '_partials/post';
-  @import '_partials/comments';
+    @import '_components/post-meta';
+    @import '_components/toc';
+  }
 }
 
 a {

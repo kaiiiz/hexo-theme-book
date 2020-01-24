@@ -43,22 +43,41 @@ function go_bottom() {
     window.scrollTo(0, document.body.scrollHeight);
 }
 
+function get_maxHeight() {
+    let meta = document.querySelector('.book-post-meta')
+    let tocbot_menu = document.querySelector('.book-tocbot-menu')
+
+    let meta_pos = meta.getBoundingClientRect();
+    let tocbot_menu_pos = tocbot_menu.getBoundingClientRect();
+
+    let screenHeight = screen.availHeight;
+    let maxHeight = screenHeight - meta_pos.y - meta_pos.height - tocbot_menu_pos.height - screenHeight * 0.3;
+
+    return maxHeight;
+}
+
+window.onload = () => {
+    let tocbot = document.querySelector('.book-tocbot')
+    let maxHeight = get_maxHeight();
+    tocbot.style.maxHeight = maxHeight + "px"
+}
+
 // post metadata
 window.onscroll = () => {
-    var scrollY = window.scrollY;
-    var menu = document.querySelector('.book-menu');
-    var meta = document.querySelector('.book-post-meta');
-    var tocbot = document.querySelector('.book-tocbot');
-    var thold = menu.offsetTop + menu.offsetHeight;
+    let scrollY = window.scrollY;
+    let meta = document.querySelector('.book-post-meta')
+    let tocbot = document.querySelector('.book-tocbot')
+    let maxHeight = get_maxHeight()
+
     if (meta == null) {
-        tocbot.style.maxHeight = "450px"
+        tocbot.style.maxHeight = maxHeight + "px"
     }
-    else if (scrollY > thold) {
+    else if (scrollY > 600) {
         meta.classList.add('hide')
-        tocbot.style.maxHeight = "450px"
+        tocbot.style.maxHeight = maxHeight + "px"
     }
     else {
         meta.classList.remove('hide')
-        tocbot.style.maxHeight = "350px"
+        tocbot.style.maxHeight = maxHeight + "px"
     }
 }
