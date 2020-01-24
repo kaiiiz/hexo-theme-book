@@ -66,28 +66,16 @@ body {
 
   @media all and (min-width: $pc-media) {
     margin-left: $menu-width;
-    padding: 2rem 3rem;
+    padding: 2rem;
   }
-  @media all and (max-width: $pcs-media) {
-    padding: 0 1rem;
+  @media all and (min-width: $pad-media) and (max-width: $pcs-media) {
+    padding: 2rem 1.5rem;
+  }
+  @media all and (max-width: $pads-media) {
+    padding: 2rem .75rem;
   }
 
   font-family: 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans', sans-serif;
-
-  .book-navbar {
-    padding: 1.25rem .75rem;
-  
-    @media all and (min-width: $pc-media) {
-      display: none;
-    }
-    @media all and (max-width: $pcs-media) {
-      display: block;
-    }
-  
-    .navbar-icon {
-      width: 25px;
-    }
-  }  
 
   .book-content {
     padding: 0 .75rem;
@@ -105,6 +93,29 @@ body {
 
     @import '_components/post-meta';
     @import '_components/toc';
+  }
+}
+
+
+.book-navbar {
+  padding: 0 .75rem 1.5rem .75rem;
+  color: $book-primary-link-color;
+
+  @media all and (min-width: $pc-media) {
+    display: none;
+  }
+  @media all and (max-width: $pcs-media) {
+    display: block;
+  }
+
+  .navbar-center {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $font-size-medium;
+  }
+
+  i {
+    color: $book-primary-link-color;
   }
 }
 

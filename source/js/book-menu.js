@@ -65,7 +65,10 @@ document.querySelectorAll('.book-menu a').forEach((item) => {
     if (!item.getAttribute('href')) return // if href has no value
     // normalized url
     let sharp = window.location.href.search('#');
-    let url = window.location.href.slice(0, sharp);
+    let url = window.location.href
+    if (sharp != -1) {
+        url = url.slice(0, sharp);
+    }
     if (url.slice(-1) == '/') {
         url = url.slice(0, -1);
     }
