@@ -6,7 +6,7 @@ $highlight-theme: hexo-theme-config("codeblock.highlight_theme");
   font-family: $code-font-family;
   background: $highlight-background;
   color: $highlight-foreground;
-  line-height: 1.5rem;
+  line-height: $font-size-smaller * 1.9;
   margin: 14px auto 14px;
 }
 
@@ -40,7 +40,7 @@ pre {
 
 .highlight {
   @extend %code-block;
-  font-size: $font-size-small;
+  font-size: $font-size-smaller;
   overflow: auto;
 
   *::selection {

@@ -1,0 +1,47 @@
+.book-post-meta {
+  font-size: $font-size-smaller;
+  max-width: $post-info-max-width;
+  max-height: 150px;
+  overflow: auto;
+  display: block;
+  opacity: 1;
+  transition: max-height 0.15s ease-in;
+  transition: opacity 0.15s ease-in;
+
+  .author {
+    display: flex;
+
+    .author-img {
+      display: flex;
+      align-items: center;
+
+      figure {
+        background: #FFF;
+      }
+    }
+
+    .author-title {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 8px;
+    }
+  }
+
+  .link {
+
+    a {
+      color: rgb(59, 67, 81);
+    }
+
+    a:hover {
+      color: rgb(128, 128, 128);
+    }
+  }
+
+  &.hide {
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+  }
+}

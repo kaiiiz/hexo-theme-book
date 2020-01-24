@@ -5,25 +5,32 @@
 
 <body>
 
-<div class="container">
-  <div class="book-container">
-    <div class="columns">
-      <div class="column col-2 hide-lg">
-        <%- partial('_partials/sidebar') %>
-      </div>
+<div class="book-container">
+  <div class="book-sidebar">
+    <%- partial('_components/brand') %>
+    <%- partial('_components/menu') %>
+  </div>
 
-      <div class="column col-8 col-lg-12">
+  <div class="off-canvas-content">
+    <div class="columns">
+      <div class="column col-10 col-lg-12">
+        <div class="book-navbar">
+          <%- partial('_partials/navbar') %>
+        </div>
         <div class="book-content">
           <%- body %>
         </div>
       </div>
-
       <div class="column col-2 hide-lg">
         <%- partial('_partials/post-info') %>
       </div>
     </div>
   </div>
+  
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
 </div>
 
 </body>
 </html>
+
+<%- js('js/book') %>

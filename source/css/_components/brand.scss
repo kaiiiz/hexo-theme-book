@@ -1,0 +1,30 @@
+.book-brand {
+  display: flex;
+  position: fixed;
+  top: .85rem;
+  left: $start-padding;
+  height: 2rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: bold;
+    color: $book-primary-link-color;
+    text-decoration: none;
+
+    img {
+      height: 1.6rem;
+      width: 1.6rem;
+    }
+
+    span {
+      margin-left: .5rem;
+    }
+  }
+
+  a:hover {
+    color: $book-primary-link-color;
+    text-decoration: none;
+  }
+}

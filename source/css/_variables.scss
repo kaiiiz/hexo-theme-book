@@ -7,22 +7,26 @@ $book-link-hover-color: rgb(109, 109, 109);
 $border-color: #ddd;
 
 // font size
-$font-size-base           : 1rem;
-$font-size-min            : .625rem;
-$font-size-smallest       : .75rem;
-$font-size-smaller        : .8125rem;
-$font-size-small          : .875rem;
+$font-size-base           : 20px;
+$font-size-min            : .5rem;
+$font-size-smallest       : .6rem;
+$font-size-smaller        : .7rem;
+$font-size-small          : .8rem;
 $font-size-medium         : 1rem;
 $font-size-large          : 1.125rem;
-$font-size-larger         : 1.25rem;
-$font-size-largest        : 1.5rem;
-$font-size-max            : 1.75rem;
+$font-size-larger         : 1.2rem;
+$font-size-largest        : 1.4rem;
+$font-size-max            : 1.6rem;
 
-$pc-media:960px;
-$pcs-media:959px;
+$pc-media                 : 1280px;
+$pcs-media                : 1279px;
+$pad-media                : 960px;
+$pads-media               : 959px;
 
 // code highlight
 $code-font-family         : consolas, Menlo, monospace;
 $code-border-radius       : 3px;
 $code-foreground          : #555;
 $code-background          : #eee;
+
+$menu-width               : 12rem;

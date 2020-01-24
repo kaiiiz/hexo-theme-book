@@ -1,0 +1,84 @@
+.book-menu {
+  $depth: 0.5rem;
+  $spacing: 0.625rem;
+
+  position: fixed;
+  top: 3.25rem;
+  bottom: 0rem;
+  width: $menu-width;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: $font-size-smaller;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    padding: $spacing * 2 $end-padding $spacing $start-padding;
+    font-size: $font-size-smaller;
+  }
+
+  ul,
+  ol,
+  li {
+    margin: 0;
+    list-style: none;
+  }
+
+  .uncollapsible {
+    padding: 0 $end-padding 0 $start-padding;
+    margin: 0;
+  }
+
+  .accordion {
+    padding: $spacing $end-padding $spacing $start-padding;
+    border-top: 1px solid rgb(231, 231, 231);
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    .accordion-body {
+      margin: 0;
+    }
+
+    input:checked~.accordion-header .icon {
+      transform: rotate(-180deg);
+    }
+
+    i.icon-arrow-down::before {
+      border-width: 0.05rem;
+      border-color: #696969;
+      height: 0.3rem;
+      width: 0.3rem;
+    }
+  }
+
+  ul {
+    margin-left: $depth;
+  }
+
+  li {
+    margin-top: $spacing;
+  }
+
+  a {
+    color: $book-primary-link-color;
+    font-weight: 400;
+  }
+
+  a:hover {
+    color: $book-primary-link-hover-color;
+  }
+
+  .current-tab {
+    color: $book-primary-color;
+    font-weight: 600;
+  }
+}
