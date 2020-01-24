@@ -1,11 +1,11 @@
 <div class='book-archive'>
   <!-- Title -->
   <% if(is_archive()){ %>
-    <h2>Archives</h2>
+    <h1>Archives</h1>
   <% } else if(is_category()) { %>
-    <h2>Categories</h2>
+    <h1>Categories</h1>
   <% } else if(is_tag()) { %>
-    <h2>Tags</h2>
+    <h1>Tags</h1>
   <% } %>
 
   <% if(is_current('archives')) { %>
@@ -35,8 +35,8 @@
   <% } %>
 
   <% Object.keys(years).reverse().forEach(function(year){  %>
-      <div class="book-archive-years">
-          <h5><%= year %></h5>
+      <div class="years">
+          <h2><%= year %></h2>
           <ul class="archive-list-item">
           <% years[year].map(function(post){  %>
               <li>
