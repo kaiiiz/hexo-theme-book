@@ -2,7 +2,9 @@
 
 <header class="navbar">
   <section class="navbar-section">
-    <img class="navbar-icon" src="<%- url_for(theme.favicon_url) %>">
+    <a onclick="open_sidebar()">
+      <i class="icon icon-menu"></i>
+    </a>
   </section>
   <section class="navbar-center">
     <%= config.title %>
@@ -13,10 +15,3 @@
     </label>
   </section>
 </header>
-
-<div class="accordion">
-  <input type="checkbox" id="accordion-sidebar" name="accordion-checkbox" hidden>
-  <div class="accordion-body">
-    <%- menu %>
-  </div>
-</div>
