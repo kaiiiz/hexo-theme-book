@@ -1,6 +1,5 @@
 .book-tocbot {
   // max-height: onload initialized
-  max-width: $post-info-max-width;
   overflow: auto;
   position: relative;
   padding-right: 0.875rem;
@@ -22,10 +21,6 @@
   
   .is-active-link::before {
     background-color: $book-primary-color !important;
-  }
-
-  @media all and (min-width: $pad-media) and (max-width: $pcs-media) {
-    max-width: $post-info-max-width - 40px;
   }
 }
 

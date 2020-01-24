@@ -15,112 +15,6 @@ body {
   font-size: $font-size-small;
 }
 
-.book-sidebar {
-  $start-padding: 1.25rem;
-  $end-padding: .6rem;
-
-  position: fixed;
-  width: $menu-width;
-  height: 100%;
-  background-color: #f7f8f9;
-  z-index: 2;
-  transition: transform 0.2s;
-
-  &.show {
-    transform: translate(0);
-  }
-
-  @media all and (min-width: $pc-media) {
-    transform: translateX(0) !important;
-  }
-
-  @media all and (max-width: $pcs-media) {
-    transform: translateX(-100%);
-  }
-
-  @import '_components/brand';
-  @import '_components/menu';
-}
-
-.off-canvas-overlay {
-  background: rgba(0, 0, 0, 0.2);
-  position: fixed;
-  display: none;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-
-  &.show {
-    display: block;
-  }
-
-  @media all and (min-width: $pc-media) {
-    display: none !important;
-  }
-}
-
-.off-canvas-content {
-  height: 100%;
-
-  @media all and (min-width: $pc-media) {
-    margin-left: $menu-width;
-    padding: 2rem;
-  }
-  @media all and (min-width: $pad-media) and (max-width: $pcs-media) {
-    padding: 2rem 1.5rem;
-  }
-  @media all and (max-width: $pads-media) {
-    padding: 2rem .75rem;
-  }
-
-  font-family: 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans', sans-serif;
-
-  .book-content {
-    padding: 0 .75rem;
-
-    @import '_components/post';
-    @import '_components/comments';
-  }
-
-  .book-post-info {
-    $post-info-max-width: 200px;
-  
-    position: fixed;
-    font-size: $font-size-smaller;
-    width: 100%;
-
-    @import '_components/post-meta';
-    @import '_components/toc';
-  }
-}
-
-
-.book-navbar {
-  padding: 0 .75rem 1.5rem .75rem;
-  color: $book-primary-link-color;
-
-  @media all and (min-width: $pc-media) {
-    display: none;
-  }
-  @media all and (max-width: $pcs-media) {
-    display: block;
-  }
-
-  .navbar-center {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: $font-size-medium;
-  }
-
-  i {
-    color: $book-primary-link-color;
-  }
-}
-
-@import '_partials/book-archive';
-
 a {
   color: $book-link-color;
 }
@@ -147,4 +41,46 @@ img {
   text-align: left;
 }
 
-@import '_components/highlight/highlight'
+.off-canvas-overlay {
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  &.show {
+    display: block;
+  }
+
+  @media all and (min-width: $pc-media) {
+    display: none !important;
+  }
+}
+
+.off-canvas-content {
+  height: 100%;
+  font-family: 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans', sans-serif;
+
+  @import '_partials/book-content';
+
+  @media all and (min-width: $pc-media) {
+    margin-left: $sidebar-width;
+    padding: $content-padding-xl $content-padding-xl;
+  }
+
+  @media all and (min-width: $pad-media) and (max-width: $pcs-media) {
+    padding: $content-padding-xl $content-padding-lg;
+  }
+
+  @media all and (max-width: $pads-media) {
+    padding: $content-padding-xl $content-padding-md;
+  }
+}
+
+@import '_partials/book-navbar';
+@import '_partials/book-sidebar';
+@import '_partials/book-archive';
+@import '_components/highlight/highlight';

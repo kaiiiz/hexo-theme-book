@@ -18,6 +18,7 @@ $font-size-larger         : 1.2rem;
 $font-size-largest        : 1.4rem;
 $font-size-max            : 1.6rem;
 
+// medias
 $pc-media                 : 1280px;
 $pcs-media                : 1279px;
 $pad-media                : 960px;
@@ -29,4 +30,22 @@ $code-border-radius       : 3px;
 $code-foreground          : #555;
 $code-background          : #eee;
 
-$menu-width               : 12rem;
+$regular-font-family      : -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+// style definition
+$content-padding-xl       : 1.8rem;
+$content-padding-lg       : 1.5rem;
+$content-padding-md       : .75rem;
+
+$post-info-max-width-xl   : 10rem;
+$post-info-max-width-lg   : 8.5rem;
+
+$post-horizontal-pd       : .75rem;
+
+$sidebar-width            : 12rem;
+$sidebar-starting-pd      : 1.25rem;
+$sidebar-ending-pd        : .6rem;
+$sidebar-brand-height     : 2rem;
+$sidebar-brand-fsize      : .8rem;
+$sidebar-menu-depth       : .5rem;
+$sidebar-menu-spacing     : .625rem;

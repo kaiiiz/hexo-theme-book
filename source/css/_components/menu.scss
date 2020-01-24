@@ -1,11 +1,9 @@
 .book-menu {
-  $depth: 0.5rem;
-  $spacing: 0.625rem;
-
   position: fixed;
   top: 3.25rem;
   bottom: 0rem;
-  width: $menu-width;
+  width: $sidebar-width;
+
   overflow-x: hidden;
   overflow-y: auto;
   font-size: $font-size-smaller;
@@ -17,7 +15,10 @@
   h5,
   h6 {
     margin: 0;
-    padding: $spacing * 2 $end-padding $spacing $start-padding;
+    padding-top: $sidebar-menu-spacing * 2;
+    padding-right: $sidebar-ending-pd;
+    padding-bottom: $sidebar-menu-spacing;
+    padding-left: $sidebar-starting-pd;
     font-size: $font-size-smaller;
   }
 
@@ -29,12 +30,12 @@
   }
 
   .uncollapsible {
-    padding: 0 $end-padding 0 $start-padding;
+    padding: 0 $sidebar-ending-pd 0 $sidebar-starting-pd;
     margin: 0;
   }
 
   .accordion {
-    padding: $spacing $end-padding $spacing $start-padding;
+    padding: $sidebar-menu-spacing $sidebar-ending-pd $sidebar-menu-spacing $sidebar-starting-pd;
     border-top: 1px solid rgb(231, 231, 231);
 
     label {
@@ -61,11 +62,11 @@
   }
 
   ul {
-    margin-left: $depth;
+    margin-left: $sidebar-menu-depth;
   }
 
   li {
-    margin-top: $spacing;
+    margin-top: $sidebar-menu-spacing;
   }
 
   a {

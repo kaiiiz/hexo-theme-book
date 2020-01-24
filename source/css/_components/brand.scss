@@ -2,20 +2,21 @@
   display: flex;
   position: fixed;
   top: .85rem;
-  left: $start-padding;
-  height: 2rem;
+  left: $sidebar-starting-pd;
+  height: $sidebar-brand-height;
 
   a {
     display: inline-flex;
     align-items: center;
-    font-size: .8rem;
+
+    font-size: $sidebar-brand-fsize;
     font-weight: bold;
     color: $book-primary-link-color;
     text-decoration: none;
 
     img {
-      height: 1.6rem;
-      width: 1.6rem;
+      height: $sidebar-brand-fsize * 2;
+      width: $sidebar-brand-fsize * 2;
     }
 
     span {
