@@ -4,7 +4,6 @@ menu_page: menu.md # filename under /source/_posts/
 author_img: favicon.ico # file path of author image
 favicon_url: favicon.ico # file path of favicon
 zoom_image: true
-collapse_depth: 2
 
 codeblock:
   # Code Highlight theme
