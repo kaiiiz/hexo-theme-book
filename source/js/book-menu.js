@@ -52,11 +52,11 @@ document.querySelectorAll('.book-menu > ul').forEach((e, idx) => {
         }
         sibling = sibling.previousElementSibling;
     }
-    if (sibling) {
-        accordion = collapse(sibling, e, idx);
+    if (!sibling || sibling.tagName == "H1") {
+        e.classList.add('uncollapsible');
     }
     else {
-        e.classList.add('uncollapsible');
+        accordion = collapse(sibling, e, idx);
     }
 })
 
@@ -86,3 +86,13 @@ document.querySelectorAll('.book-menu a').forEach((item) => {
         }
     }
 })
+
+window.onbeforeunload = () => {
+    let sidebarPos = document.querySelector('.book-menu').scrollTop
+    window.localStorage.setItem('sidebarPos', sidebarPos)
+}
+
+if (window.localStorage.sidebarPos) {
+    let sidebarPos = window.localStorage.sidebarPos
+    document.querySelector('.book-menu').scrollTop = sidebarPos
+}

@@ -14,11 +14,13 @@
   h4,
   h5,
   h6 {
-    margin-top: $sidebar-menu-spacing * 2;
-    margin-right: $sidebar-ending-pd;
-    margin-bottom: $sidebar-menu-spacing;
-    margin-left: $sidebar-starting-pd;
+    padding: 0 $sidebar-ending-pd 0 $sidebar-starting-pd;
+    margin: $sidebar-menu-spacing*2 0 $sidebar-menu-spacing 0;
     font-size: $font-size-smaller;
+  }
+
+  #none {
+    margin: 0;
   }
 
   ul,
@@ -29,10 +31,9 @@
   }
 
   .uncollapsible {
-    margin-top: 0;
-    margin-right: $sidebar-ending-pd;
-    margin-bottom: $sidebar-menu-spacing;
-    margin-left: $sidebar-starting-pd;
+    padding: 0 $sidebar-ending-pd 0 $sidebar-starting-pd;
+    margin: 0 0 $sidebar-menu-spacing 0;
+    border-top: 1px solid #e7e7e7;
   }
 
   .accordion {
