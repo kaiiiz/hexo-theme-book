@@ -19,15 +19,15 @@
     font-size: $font-size-smaller;
   }
 
-  #none {
-    margin: 0;
-  }
-
   ul,
   ol,
   li {
     margin: 0;
     list-style: none;
+  }
+
+  p {
+    margin: 0;
   }
 
   .uncollapsible {
