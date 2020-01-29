@@ -15,7 +15,7 @@
   h5,
   h6 {
     padding: 0 $sidebar-ending-pd 0 $sidebar-starting-pd;
-    margin: $sidebar-menu-spacing*2 0 $sidebar-menu-spacing 0;
+    margin: $sidebar-menu-spacing * 2 0 $sidebar-menu-spacing 0;
     font-size: $font-size-smaller;
   }
 
@@ -51,7 +51,7 @@
       margin: 0;
     }
 
-    input:checked~.accordion-header .icon {
+    input:checked ~ .accordion-header .icon {
       transform: rotate(-180deg);
     }
 

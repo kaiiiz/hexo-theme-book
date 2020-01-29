@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .book-container {
   width: 100%;
@@ -64,7 +64,7 @@ img {
   height: 100%;
   font-family: $content-font-family;
 
-  @import '_partials/book-content';
+  @import "_partials/book-content";
 
   @media all and (min-width: $pc-media) {
     margin-left: $sidebar-width;
@@ -80,6 +80,6 @@ img {
   }
 }
 
-@import '_partials/book-navbar';
-@import '_partials/book-sidebar';
-@import '_partials/book-archive';
+@import "_partials/book-navbar";
+@import "_partials/book-sidebar";
+@import "_partials/book-archive";
