@@ -1,0 +1,24 @@
+.book-archive {
+  h1,
+  h2 {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: $font-size-max;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: $font-size-medium;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .years {
+    padding-bottom: 1.25rem;
+  }
+}

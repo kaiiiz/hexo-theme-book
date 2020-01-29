@@ -1,0 +1,31 @@
+.book-brand {
+  display: flex;
+  position: fixed;
+  top: 0.85rem;
+  left: $sidebar-starting-pd;
+  height: $sidebar-brand-height;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+
+    font-size: $sidebar-brand-fsize;
+    font-weight: bold;
+    color: $book-primary-link-color;
+    text-decoration: none;
+
+    img {
+      height: $sidebar-brand-fsize * 2;
+      width: $sidebar-brand-fsize * 2;
+    }
+
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+
+  a:hover {
+    color: $book-primary-link-color;
+    text-decoration: none;
+  }
+}

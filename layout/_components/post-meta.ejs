@@ -1,0 +1,54 @@
+<div class="book-post-meta">
+
+  <div class="author">
+
+    <!-- Author image -->
+    <div class="author-img">
+      <% if (page.author_img) { %>
+        <figure class="avatar avatar-lg">
+          <img src="<%- url_for(page.author_img) %>" alt="...">
+        </figure>
+      <% } else if (theme.author_img) { %>
+        <figure class="avatar avatar-lg">
+          <img src="<%- url_for(theme.author_img) %>" alt="...">
+        </figure>
+      <% } else { %>
+        <figure
+          class="avatar avatar-lg"
+          data-initial="<%= page.author ? page.author[0] : config.author[0] %>"
+          style="background-color: #3b4351;">
+        </figure>
+      <% } %>
+    </div>
+
+    <!-- Author title -->
+    <div class="author-title">
+      <div><%= page.author ? page.author : config.author %></div>
+      <div><%= page.date ? page.date.format(config.date_format) : "" %></div>
+    </div>
+  </div>
+
+  <% if ( (page.categories && page.categories.length) || (page.tags && page.tags.length) ) { %>
+    <div class="divider"></div>
+
+    <div class="link">
+      <%- list_categories(page.categories, {
+          show_count: false,
+          style: 'none',
+          separator: ' '
+      }) %>
+
+      <%- list_tags(page.tags, {
+          show_count: false,
+          style: 'none',
+          separator: ' ',
+          transform(str) {
+            return "#" + str
+          }
+      }) %>
+    </div>
+    
+  <% } %>
+
+  <div class="divider"></div>
+</div>

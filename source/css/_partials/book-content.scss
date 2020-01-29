@@ -1,0 +1,23 @@
+.book-content {
+  padding: 0 $post-horizontal-pd;
+
+  @import "../_components/post";
+  @import "../_components/comments";
+  @import "../_components/highlight/highlight";
+}
+
+.book-post-info {
+  position: fixed;
+  font-size: $font-size-smaller;
+
+  @media all and (min-width: $pc-media) {
+    max-width: $post-info-max-width-xl;
+  }
+
+  @media all and (min-width: $pad-media) and (max-width: $pcs-media) {
+    max-width: $post-info-max-width-lg;
+  }
+
+  @import "../_components/post-meta";
+  @import "../_components/toc";
+}

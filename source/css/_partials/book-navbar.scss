@@ -1,0 +1,18 @@
+.book-navbar {
+  padding-top: 0;
+  padding-right: $post-horizontal-pd;
+  padding-bottom: 1.5rem;
+  padding-left: $post-horizontal-pd;
+
+  i {
+    color: $book-primary-link-color;
+  }
+
+  @media all and (min-width: $pc-media) {
+    display: none;
+  }
+
+  @media all and (max-width: $pcs-media) {
+    display: block;
+  }
+}

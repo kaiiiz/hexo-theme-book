@@ -18,6 +18,6 @@ hexo.on('generateAfter', function () {
 
 hexo.extend.renderer.register('ejs', 'html', function(data, options){
   options.filename = data.path;
-  options.sidebar = menufile ? menufile.content : '';
+  options.menu = menufile ? menufile.content : '';
   return ejs.render(data.text, options);
 }, true);

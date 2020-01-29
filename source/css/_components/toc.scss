@@ -1,0 +1,40 @@
+.book-tocbot {
+  // max-height: onload initialized
+  overflow: auto;
+  position: relative;
+  padding-right: 0.875rem;
+  transition: max-height 0.15s ease-in-out;
+
+  ul {
+    list-style: none;
+    position: inherit;
+    overflow: hidden;
+
+    li {
+      margin-left: 0.25rem;
+    }
+  }
+
+  .toc-link::before {
+    background-color: white !important;
+  }
+
+  .is-active-link::before {
+    background-color: $book-primary-color !important;
+  }
+}
+
+.book-tocbot-menu {
+  margin: 1rem 0.75rem;
+
+  a {
+    display: block;
+    margin: 0.375rem 0;
+    color: #999;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: gray;
+  }
+}

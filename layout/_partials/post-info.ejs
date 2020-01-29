@@ -1,0 +1,7 @@
+<div class="book-post-info">
+  <% if (page.post_meta === undefined || page.post_meta) { %>
+    <%- partial('_components/post-meta') %>
+  <% } %>
+
+  <%- partial('_components/toc') %>
+</div>
