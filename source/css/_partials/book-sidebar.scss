@@ -2,7 +2,7 @@
   position: fixed;
   width: $sidebar-width;
   height: 100%;
-  z-index: 2;
+  z-index: 500;
 
   background-color: #f7f8f9;
   transition: transform 0.2s;
@@ -19,6 +19,6 @@
     transform: translateX(-100%);
   }
 
-  @import '../_components/brand';
-  @import '../_components/menu';
+  @import "../_components/brand";
+  @import "../_components/menu";
 }

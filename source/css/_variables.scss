@@ -30,9 +30,9 @@ $code-border-radius       : 3px;
 $code-foreground          : #555;
 $code-background          : #eee;
 
-$regular-font-family      : -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+$content-font-family      : -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 
-// style definition
+// layout definition
 $content-padding-xl       : 1.8rem;
 $content-padding-lg       : 1.5rem;
 $content-padding-md       : .75rem;
@@ -49,3 +49,6 @@ $sidebar-brand-height     : 2rem;
 $sidebar-brand-fsize      : .8rem;
 $sidebar-menu-depth       : .5rem;
 $sidebar-menu-spacing     : .625rem;
+
+// post style
+$line-margin              : 1rem;

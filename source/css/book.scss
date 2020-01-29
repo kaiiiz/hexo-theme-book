@@ -49,7 +49,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 499;
 
   &.show {
     display: block;
@@ -62,7 +62,7 @@ img {
 
 .off-canvas-content {
   height: 100%;
-  font-family: 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans', sans-serif;
+  font-family: $content-font-family;
 
   @import '_partials/book-content';
 
@@ -83,4 +83,3 @@ img {
 @import '_partials/book-navbar';
 @import '_partials/book-sidebar';
 @import '_partials/book-archive';
-@import '_components/highlight/highlight';

@@ -1,8 +1,9 @@
 .book-content {
   padding: 0 $post-horizontal-pd;
 
-  @import '../_components/post';
-  @import '../_components/comments';
+  @import "../_components/post";
+  @import "../_components/comments";
+  @import "../_components/highlight/highlight";
 }
 
 .book-post-info {
@@ -17,6 +18,6 @@
     max-width: $post-info-max-width-lg;
   }
 
-  @import '../_components/post-meta';
-  @import '../_components/toc';
+  @import "../_components/post-meta";
+  @import "../_components/toc";
 }

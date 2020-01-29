@@ -7,7 +7,7 @@ $highlight-theme: hexo-theme-config("codeblock.highlight_theme");
   background: $highlight-background;
   color: $highlight-foreground;
   line-height: $font-size-smaller * 1.9;
-  margin: 14px auto 14px;
+  margin: $line-margin auto $line-margin;
 }
 
 %disable-user-select {
@@ -134,7 +134,7 @@ pre {
 
   .meta {
     color: $highlight-yellow;
-    @extend %disable-user-select;
+    // @extend %disable-user-select;
   }
 
   .comment {

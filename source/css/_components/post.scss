@@ -11,7 +11,7 @@
   h6 {
     font-weight: bold;
     padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: $line-margin;
     border-bottom: 1px solid $border-color;
   }
 
@@ -48,13 +48,13 @@
   }
 
   p {
-    margin-bottom: 1rem;
+    margin-bottom: $line-margin;
   }
 
   hr {
     border: 0.5px solid $border-color;
     background-color: $border-color;
-    margin: 1rem 0;
+    margin: $line-margin 0;
   }
 
   .table-wrapper {
@@ -77,7 +77,7 @@
   ul,
   ol {
     list-style-position: outside;
-    margin: 0 0 1.4rem 2rem;
+    margin: 0 0 $line-margin + 0.2rem 1.4rem;
 
     ol {
       margin-top: 0;
@@ -87,6 +87,10 @@
     ul {
       margin-top: 0;
       margin-bottom: 0;
+    }
+
+    p {
+      margin: 0;
     }
   }
 
@@ -99,7 +103,15 @@
     margin: 1.125rem 1.125rem 1.125rem 0;
     padding: 0.2rem 1rem;
 
+    p {
+      margin-bottom: .5rem;
+    }
+
     p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul:last-child {
       margin-bottom: 0;
     }
   }
