@@ -1,10 +1,9 @@
-home_page: home.md # filename under /source/_posts/
-menu_page: menu.md # filename under /source/_posts/
+home_page: home.md        # filepath under /source/_posts/
+menu_page: menu.md        # filepath under /source/_posts/
+author_img:               # filepath of author image
+favicon_url: favicon.png  # filepath of favicon
 
-author_img: favicon.ico # file path of author image
-favicon_url: favicon.ico # file path of favicon
 zoom_image: true
-
 codeblock:
   # Code Highlight theme
   # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
