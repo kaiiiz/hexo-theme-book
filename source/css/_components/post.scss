@@ -116,6 +116,36 @@
     }
   }
 
+  .note {
+    margin: 1.125rem 1.125rem 1.125rem 0;
+    padding: 0.2rem 1rem;
+    background-color: #e7f2fa;
+    p:last-child {
+      margin-bottom: 0;
+    }
+    border-left: .1rem solid #6ab0de;
+  }
+
+  .tip {
+    margin: 1.125rem 1.125rem 1.125rem 0;
+    padding: 0.2rem 1rem;
+    background-color: #dbfaf4;
+    p:last-child {
+      margin-bottom: 0;
+    }
+    border-left: .1rem solid #1abc9c;
+  }
+
+  .attention {
+    margin: 1.125rem 1.125rem 1.125rem 0;
+    padding: 0.2rem 1rem;
+    background-color: #ffedcc;
+    p:last-child {
+      margin-bottom: 0;
+    }
+    border-left: .1rem solid #f0b37e;
+  }
+
   .video-container {
     position: relative;
     margin-bottom: 1.5rem;
