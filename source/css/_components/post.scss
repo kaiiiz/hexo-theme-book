@@ -116,6 +116,37 @@
     }
   }
 
+  @mixin md-container($border-color, $background-color) {
+    margin: 1.125rem 1.125rem 1.125rem 0;
+    padding: 0.2rem 1rem;
+    background-color: $background-color;
+    border-left: .1rem solid $border-color;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .note {
+    @include md-container(#6ab0de, #e7f2fa)
+  }
+
+  .tip {
+    @include md-container(#1abc9c, #dbfaf4)
+  }
+
+  .attention {
+    @include md-container(#f0b37e, #ffedcc)
+  }
+
   .video-container {
     position: relative;
     margin-bottom: 1.5rem;
