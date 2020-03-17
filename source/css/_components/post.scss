@@ -77,7 +77,7 @@
   ul,
   ol {
     list-style-position: outside;
-    margin: 0 0 $line-margin + 0.2rem 1.4rem;
+    margin: 0 0 $line-margin 1.4rem;
 
     ol {
       margin-top: 0;
@@ -165,7 +165,7 @@
 
   figcaption {
     text-align: center;
-    font-size: $font-size-smallest;
+    font-size: $font-size-smaller;
   }
 
   img {
