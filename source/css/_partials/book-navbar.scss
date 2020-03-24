@@ -1,8 +1,8 @@
 .book-navbar {
   padding-top: 0;
-  padding-right: $post-horizontal-pd;
+  padding-right: $post-horizontal-pd-lg;
   padding-bottom: 1.5rem;
-  padding-left: $post-horizontal-pd;
+  padding-left: $post-horizontal-pd-lg;
 
   i {
     color: $book-primary-link-color;
@@ -14,5 +14,10 @@
 
   @media all and (max-width: $pcs-media) {
     display: block;
+  }
+
+  @media all and (max-width: $pc-media) {
+    padding-right: $post-horizontal-pd-md;
+    padding-left: $post-horizontal-pd-md;
   }
 }

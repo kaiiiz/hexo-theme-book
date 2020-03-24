@@ -4,7 +4,7 @@ $book-primary-link-hover-color: rgb(128, 128, 128);
 $book-link-color: #004ed0;
 $book-link-visited-color: #7170db;
 $book-link-hover-color: rgb(109, 109, 109);
-$border-color: #ddd;
+$border-color: #e7e7e7;
 
 // font size
 $font-size-base           : 20px;
@@ -33,14 +33,15 @@ $code-background          : #eee;
 $content-font-family      : sans-serif;
 
 // layout definition
-$content-padding-xl       : 1.8rem;
+$content-padding-xl       : 2.2rem;
 $content-padding-lg       : 1.5rem;
 $content-padding-md       : .75rem;
 
 $post-info-max-width-xl   : 10rem;
 $post-info-max-width-lg   : 8.5rem;
 
-$post-horizontal-pd       : .75rem;
+$post-horizontal-pd-lg    : 4rem;
+$post-horizontal-pd-md    : 1.25rem;
 
 $sidebar-width            : 12rem;
 $sidebar-starting-pd      : 1.25rem;

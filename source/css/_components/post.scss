@@ -3,6 +3,10 @@
     text-decoration: underline;
   }
 
+  > *:first-child {
+    margin-top: 0 !important;
+  }
+
   h1,
   h2,
   h3,
@@ -10,41 +14,40 @@
   h5,
   h6 {
     font-weight: bold;
-    padding-bottom: 0.5rem;
     margin-bottom: $line-margin;
-    border-bottom: 1px solid $border-color;
+    margin-top: $line-margin * 1.7;
   }
 
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 1.6rem;
+  h1,
+  h2 {
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid $border-color
   }
 
   h1 {
-    font-size: $font-size-max;
-  }
-
-  h2 {
     font-size: $font-size-largest;
   }
 
-  h3 {
-    font-size: $font-size-larger;
+  h2 {
+    font-size: $font-size-large;
+
   }
 
-  h4 {
+  h3 {
     font-size: $font-size-medium;
   }
 
-  h5 {
+  h4 {
     font-size: $font-size-small;
   }
 
-  h6 {
+  h5 {
     font-size: $font-size-smaller;
+  }
+
+  h6 {
+    font-size: $font-size-smallest;
+    color: grey;
   }
 
   p {
@@ -52,7 +55,7 @@
   }
 
   hr {
-    border: 0.5px solid $border-color;
+    border: 1px solid $border-color;
     background-color: $border-color;
     margin: $line-margin 0;
   }
@@ -64,11 +67,13 @@
 
     table {
       width: 100%;
+      border-spacing: 0px;
+      border-collapse: collapse;
 
       th,
       td {
-        padding: 0.75rem;
-        border-top: 1px solid $border-color;
+        padding: 0.7rem;
+        border: 1px solid $border-color;
         text-align: left;
       }
     }
@@ -92,11 +97,6 @@
     p {
       margin: 0;
     }
-  }
-
-  li {
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
   }
 
   blockquote {
@@ -166,6 +166,7 @@
   figcaption {
     text-align: center;
     font-size: $font-size-smaller;
+    margin: 0.5rem 0;
   }
 
   img {
