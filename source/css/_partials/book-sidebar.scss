@@ -11,8 +11,12 @@
     transform: translateX(0);
   }
 
+  &.hide {
+    transform: translateX(-100%);
+  }
+
   @media all and (min-width: $pc-media) {
-    transform: translateX(0) !important;
+    transform: translateX(0);
   }
 
   @media all and (max-width: $pcs-media) {
@@ -22,3 +26,5 @@
   @import "../_components/brand";
   @import "../_components/menu";
 }
+
+@import "../_components/sidebar-toggle";

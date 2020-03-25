@@ -63,8 +63,13 @@ img {
 .off-canvas-content {
   height: 100%;
   font-family: $content-font-family;
+  transition: margin 200ms;
 
   @import "_partials/book-content";
+
+  &.extend {
+    margin-left: 0;
+  }
 
   @media all and (min-width: $pc-media) {
     margin-left: $sidebar-width;
