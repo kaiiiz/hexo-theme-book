@@ -63,6 +63,10 @@
     }
   }
 
+  .accordion input:checked~.accordion-body, .accordion[open] .accordion-body {
+    max-height: unset;
+  }
+
   ul {
     margin-left: $sidebar-menu-depth;
   }
