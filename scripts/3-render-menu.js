@@ -8,10 +8,10 @@ var menufile;
 
 hexo.on('generateAfter', function () {
   var menu = hexo.theme.config.menu_page;
-  var posts = hexo.locals.get('posts')
-  posts.forEach(function(post){
-    if(post.source === "_posts/" + menu) {
-      menufile = post;
+  var pages = hexo.locals.get('pages')
+  pages.forEach(function(page){
+    if(page.source === menu) {
+      menufile = page;
     }
   })
 })

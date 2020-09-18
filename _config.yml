@@ -1,5 +1,5 @@
-home_page: home.md        # filepath under /source/_posts/
-menu_page: menu.md        # filepath under /source/_posts/
+home_page: home.md        # filepath under /source/
+menu_page: menu.md        # filepath under /source/
 author_img:               # filepath of author image
 favicon_url: favicon.png  # filepath of favicon
 
