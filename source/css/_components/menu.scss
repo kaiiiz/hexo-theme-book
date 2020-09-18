@@ -88,4 +88,8 @@
     color: $book-primary-color;
     font-weight: 600;
   }
+
+  &.hide {
+    display: none;
+  }
 }
