@@ -22,33 +22,23 @@ hexo.extend.filter.register('after_post_render', function (data) {
   return data;
 })
 
-// before_generate (prepare home file and menu file)
-
-hexo.extend.filter.register('before_generate', function () {
-  var menu_path = hexo.theme.config.menu_page;
-  var home_path = hexo.theme.config.home_page;
-  var pages = hexo.locals.get('pages');
-
-  pages = pages.filter(function (page) {
-    if (page.source === menu_path) {
-      menu_file = page;
-      return false;
-    }
-    else if (page.source === home_path) {
-      home_file = page;
-      return false;
-    }
-    return true;
-  })
-
-  hexo.locals.set('pages', function () {
-    return pages;
-  });
-});
+// before_generate
 
 // generator
 
 hexo.extend.generator.register('home', function(locals) {
+  var menu_path = hexo.theme.config.menu_page;
+  var home_path = hexo.theme.config.home_page;
+
+  locals.pages.forEach(function (page) {
+    if (page.source === menu_path) {
+      menu_file = page;
+    }
+    else if (page.source === home_path) {
+      home_file = page;
+    }
+  })
+
   return {
     path: 'index.html',
     data: home_file,
@@ -57,6 +47,11 @@ hexo.extend.generator.register('home', function(locals) {
 });
 
 // after_generate
+
+hexo.extend.filter.register('after_generate', function () {
+  hexo.route.remove(home_file.path);
+  hexo.route.remove(menu_file.path);
+});
 
 // renderer
 
