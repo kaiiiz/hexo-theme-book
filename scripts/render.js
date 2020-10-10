@@ -9,10 +9,18 @@ var menu_file, home_file;
 // before_post_render
 
 hexo.extend.filter.register('before_post_render', function (data) {
-  // preprocess
+  // preprocess markdown file
 })
 
 // after_post_render
+
+hexo.extend.filter.register('after_post_render', function (data) {
+  // checkbox in list
+  let checkbox_pattern = /<li>([\s]*)<input type="checkbox" id="(\w*)"(>| checked="true">| checked>)/g;
+  let checkbox_replacement = "<li class=\"checkbox-item\">$1<input type=\"checkbox\" id=\"$2\"$3";
+  data.content = data.content.replace(checkbox_pattern, checkbox_replacement);
+  return data;
+})
 
 // before_generate (prepare home file and menu file)
 
