@@ -77,17 +77,22 @@ function highlight_current_tab() {
         if (item.href === url) {
             item.classList.add('current-tab')
             var parent = item.parentNode;
-            while (parent.className != "book-menu") {
-                if (parent.className == "accordion") {
+            while (!parent.classList.contains("book-menu")) {
+                if (parent.classList.contains("accordion")) {
                     break;
                 }
                 parent = parent.parentNode;
             }
-            if (parent.className == "accordion") {
+            if (parent.classList.contains("accordion")) {
                 parent.querySelector('input').setAttribute("checked", "");
             }
         }
     })
+}
+
+function show_sidebar() {
+    var menu = document.getElementById('menu');
+    menu.classList.remove('hide');
 }
 
 /* ----- onload ----- */
@@ -95,6 +100,7 @@ function highlight_current_tab() {
 clear_invalid_syntax()
 pack_menu_accordion()
 highlight_current_tab()
+show_sidebar()
 
 // restore sidebar position after reloading page
 window.addEventListener('beforeunload', () => {

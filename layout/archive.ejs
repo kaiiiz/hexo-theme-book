@@ -3,9 +3,9 @@
   <% if(is_archive()){ %>
     <h1>Archives</h1>
   <% } else if(is_category()) { %>
-    <h1>Categories</h1>
+    <h1>Category - <%= page.category %></h1>
   <% } else if(is_tag()) { %>
-    <h1>Tags</h1>
+    <h1>Tag - <%= page.tag %></h1>
   <% } %>
 
   <% if(is_current('archives')) { %>

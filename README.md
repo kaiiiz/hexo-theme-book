@@ -8,7 +8,7 @@
 
 ## ⚠ Notice
 
-Since I have already migrated my note from hexo to [hugo](https://gohugo.io/), I think that I have no time and no reason to maintain this project. Sorry! If you want to add more features to this theme, fill free to fork and modify it by yourself.
+Since I have already migrated my note from hexo to [hugo](https://gohugo.io/), the development progress may be slow down in the future. If you want to add more features to this theme, fill free to fork and modify it by yourself. Though I will not put a lot efforts in this project, any suggestions are still welcome.
 
 However, I suggest that you should try hugo first before using hexo (if you never used both). Hugo is writen by go-lang, and it is faster, powerful and lighter than hexo in my opinion. After doing some research, I realized that hugo can meet all of my requirements and also provide a more logical way to customize a theme at the same time which is amazing, you guys should give it a try!
 

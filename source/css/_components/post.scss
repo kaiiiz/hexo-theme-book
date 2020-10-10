@@ -183,4 +183,13 @@
   iframe {
     width: 100%;
   }
+
+  .checkbox-item {
+    list-style-type: none;
+
+    input {
+      margin-left: -1rem;
+      margin-right: 0.4rem;
+    }
+  }
 }

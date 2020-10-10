@@ -63,6 +63,10 @@
     }
   }
 
+  .accordion input:checked~.accordion-body, .accordion[open] .accordion-body {
+    max-height: unset;
+  }
+
   ul {
     margin-left: $sidebar-menu-depth;
   }
@@ -83,5 +87,9 @@
   .current-tab {
     color: $book-primary-color;
     font-weight: 600;
+  }
+
+  &.hide {
+    display: none;
   }
 }
