@@ -6,22 +6,15 @@
 
 ![book-preview](https://kaiiiz.github.io/hexo-theme-book-demo/images/header.png)
 
-## ⚠ Notice
+## 关于本仓库
 
-Since I have already migrated my note from hexo to [hugo](https://gohugo.io/), the development progress may be slow down in the future. If you want to add more features to this theme, fill free to fork and modify it by yourself. Though I will not put a lot efforts in this project, any suggestions are still welcome.
+由于[原仓库](https://github.com/kaiiiz/hexo-theme-book.git)的作者已经长达3年未更新，并且原仓库的渲染器也不再支持新版的hexo以及nodejs，所以从从原仓库分支并继续维护。
 
-However, I suggest that you should try hugo first before using hexo (if you never used both). Hugo is writen by go-lang, and it is faster, powerful and lighter than hexo in my opinion. After doing some research, I realized that hugo can meet all of my requirements and also provide a more logical way to customize a theme at the same time which is amazing, you guys should give it a try!
+该仓库不再需要安装scss渲染器，和其他主题一样直接clone即可
 
-## 💿 Installation
-
+## 💿 安装
 ```
-git clone https://github.com/kaiiiz/hexo-theme-book.git themes/book
-```
-
-If you don't have scss renderer, follow this:
-
-```
-npm install hexo-renderer-scss --save
+git clone https://github.com/suswhw/hexo-theme-book-fork.git themes/book
 ```
 
 Modify `theme` entry in `_config.yml`
@@ -30,60 +23,46 @@ Modify `theme` entry in `_config.yml`
 theme: book
 ```
 
-### Change markdown renderer
+## 🎈 更新
 
-For better render quality, I suggest that you should change the default renderer.
+cd到主题文件夹，运行`git pull`.
 
-The detail, see [change markdown renderer](https://github.com/kaiiiz/hexo-theme-book/wiki/Change-markdown-renderer)
+## ⚒ 配置
 
-## 🎈 Update
+配置的详细信息，请参见 [Configurations](https://github.com/kaiiiz/hexo-theme-book/wiki/Configuration)（生肉）
 
-Jump into the theme folder, run `git pull`. If you use `/source/_data/book.yml`, please note the diffrence of updated `_config.yml`.
+## 🎁 特色
 
-### Smooth Update
+**外部库集成:**
 
-For smoothly updating, I recommand to create a config file named `book.yml` in `/source/_data` folder (If it doesn't exist, create one)
-
-> **Notice: source folder is under your hexo working directory, not the theme one!**
-
-Copy the contents of `/themes/book/_config.yml` to `/source/_data/book.yml`, it will replace the contents of config in `/themes/book/_config.yml`. Now you can configure it independently and also, you can update theme more smoothly.
-
-## ⚒ Configurations
-
-The detail of config, see [Configurations](https://github.com/kaiiiz/hexo-theme-book/wiki/Configuration)
-
-## 🎁 Features
-
-**External Library Integration:**
-
-Comments system:
+评论系统:
 
 * [utterances](https://github.com/utterance/utterances)
 * [disqus](https://disqus.com/)
 * [gitalk](https://github.com/gitalk/gitalk)
 
-Others:
+其他:
 
 * [zooming](https://github.com/kingdido999/zooming)
 * [google analytics](https://analytics.google.com/)
 
-**Code Syntax Highlight:**
+**代码语法高亮:**
 
-Using the built-in systax highlight system ([highlight.js](https://highlightjs.org/)) supported from hexo itself, so no other configuration is needed.
+使用hexo本身支持的内置的高亮显示系统([highlight.js](https://highlightjs.org/))因此不需要其他配置
 
-However, there are multiple themes integrated from [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme). You can change the theme in `_config.yml`.
+有多个主题和 [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme). 你可以在 `_config.yml`中切换主题。
 
 | Normal | Night | Night Eighties | Night Blue | Night Bright
 | --- | --- | --- | --- | --- | 
 | ![](https://github.com/ChrisKempson/Tomorrow-Theme/raw/master/Images/Tomorrow.png) | ![](https://github.com/ChrisKempson/Tomorrow-Theme/raw/master/Images/Tomorrow-Night.png) | ![](https://raw.githubusercontent.com/ChrisKempson/Tomorrow-Theme/master/Images/Tomorrow-Night-Eighties.png) | ![](https://raw.githubusercontent.com/ChrisKempson/Tomorrow-Theme/master/Images/Tomorrow-Night-Blue.png) | ![](https://raw.githubusercontent.com/ChrisKempson/Tomorrow-Theme/master/Images/Tomorrow-Night-Bright.png)
 
-**Powerful and Fully-Customized Sidebar Menu:**
+**功能强大且完全定制的菜单:**
 
 Checkout [Menu Realtime Demo](https://kaiiiz.github.io/hexo-theme-book-demo/demo/menu-realtime/)
 
-**Responsive Layout:**
+**响应式布局:**
 
-Book will adapt to different viewpoints in order to give you the best reading experience.
+这本书将适应不同的风格，以便给你最好的阅读体验。
 
 ![](https://kaiiiz.github.io/hexo-theme-book-demo/images/responsive.png)
 

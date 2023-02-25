@@ -1,0 +1,27 @@
+.book-navbar {
+  padding-top: 0;
+  padding-right: 4rem;
+  padding-bottom: 1.5rem;
+  padding-left: 4rem;
+}
+.book-navbar i {
+  color: rgb(47, 47, 47);
+}
+@media all and (min-width: 1280px) {
+  .book-navbar {
+    display: none;
+  }
+}
+@media all and (max-width: 1279px) {
+  .book-navbar {
+    display: block;
+  }
+}
+@media all and (max-width: 1280px) {
+  .book-navbar {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+/*# sourceMappingURL=book-navbar.css.map */

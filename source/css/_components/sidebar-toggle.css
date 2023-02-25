@@ -1,0 +1,33 @@
+.sidebar-toggle {
+  position: fixed;
+  bottom: 0.6rem;
+  left: 12.7rem;
+  transition: left 200ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #686868;
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+}
+.sidebar-toggle.extend {
+  left: 0.7rem;
+}
+@media all and (max-width: 1280px) {
+  .sidebar-toggle {
+    display: none;
+  }
+}
+.sidebar-toggle > .sidebar-toggle-inner {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #686868;
+  display: none;
+}
+.sidebar-toggle > .sidebar-toggle-inner.show {
+  display: block;
+}
+
+/*# sourceMappingURL=sidebar-toggle.css.map */

@@ -1,0 +1,181 @@
+.book-post a:hover {
+  text-decoration: underline;
+}
+.book-post > *:first-child {
+  margin-top: 0 !important;
+}
+.book-post h1,
+.book-post h2,
+.book-post h3,
+.book-post h4,
+.book-post h5,
+.book-post h6 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 1.7rem;
+}
+.book-post h1,
+.book-post h2 {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #e7e7e7;
+}
+.book-post h1 {
+  font-size: 1.4rem;
+}
+.book-post h2 {
+  font-size: 1.125rem;
+}
+.book-post h3 {
+  font-size: 1rem;
+}
+.book-post h4 {
+  font-size: 0.8rem;
+}
+.book-post h5 {
+  font-size: 0.7rem;
+}
+.book-post h6 {
+  font-size: 0.6rem;
+  color: grey;
+}
+.book-post p {
+  margin-bottom: 1rem;
+}
+.book-post hr {
+  border: 1px solid #e7e7e7;
+  background-color: #e7e7e7;
+  margin: 1rem 0;
+}
+.book-post .table-wrapper {
+  max-width: 100%;
+  margin: 1.25rem 0;
+  overflow: auto;
+}
+.book-post .table-wrapper table {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+.book-post .table-wrapper table th,
+.book-post .table-wrapper table td {
+  padding: 0.7rem;
+  border: 1px solid #e7e7e7;
+  text-align: left;
+}
+.book-post ul,
+.book-post ol {
+  list-style-position: outside;
+  margin: 0 0 1rem 1.4rem;
+}
+.book-post ul ol,
+.book-post ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.book-post ul ul,
+.book-post ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.book-post ul p,
+.book-post ol p {
+  margin: 0;
+}
+.book-post blockquote {
+  margin: 1.125rem 0 1.125rem 0;
+  padding: 0.2rem 1rem;
+}
+.book-post blockquote p {
+  margin-bottom: 0.5rem;
+}
+.book-post blockquote p:last-child {
+  margin-bottom: 0;
+}
+.book-post blockquote ul:last-child {
+  margin-bottom: 0;
+}
+.book-post blockquote.right {
+  border-left: none;
+  border-right: 0.1rem solid #dadee4;
+}
+.book-post .note {
+  margin: 1.125rem 1.125rem 1.125rem 0;
+  padding: 0.2rem 1rem;
+  background-color: #e7f2fa;
+  border-left: 0.1rem solid #6ab0de;
+}
+.book-post .note p {
+  margin-bottom: 0.5rem;
+}
+.book-post .note p:last-child {
+  margin-bottom: 0;
+}
+.book-post .note ul:last-child {
+  margin-bottom: 0;
+}
+.book-post .tip {
+  margin: 1.125rem 1.125rem 1.125rem 0;
+  padding: 0.2rem 1rem;
+  background-color: #dbfaf4;
+  border-left: 0.1rem solid #1abc9c;
+}
+.book-post .tip p {
+  margin-bottom: 0.5rem;
+}
+.book-post .tip p:last-child {
+  margin-bottom: 0;
+}
+.book-post .tip ul:last-child {
+  margin-bottom: 0;
+}
+.book-post .attention {
+  margin: 1.125rem 1.125rem 1.125rem 0;
+  padding: 0.2rem 1rem;
+  background-color: #ffedcc;
+  border-left: 0.1rem solid #f0b37e;
+}
+.book-post .attention p {
+  margin-bottom: 0.5rem;
+}
+.book-post .attention p:last-child {
+  margin-bottom: 0;
+}
+.book-post .attention ul:last-child {
+  margin-bottom: 0;
+}
+.book-post .video-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.book-post .video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.book-post figcaption {
+  text-align: center;
+  font-size: 0.7rem;
+  margin: 0.5rem 0;
+}
+.book-post img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.book-post iframe {
+  width: 100%;
+}
+.book-post .checkbox-item {
+  list-style-type: none;
+}
+.book-post .checkbox-item input {
+  margin-left: -1rem;
+  margin-right: 0.4rem;
+}
+
+/*# sourceMappingURL=post.css.map */

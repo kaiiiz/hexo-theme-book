@@ -1,0 +1,28 @@
+.book-brand {
+  display: flex;
+  position: fixed;
+  top: 0.85rem;
+  left: 1.25rem;
+  height: 2rem;
+}
+.book-brand a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: rgb(47, 47, 47);
+  text-decoration: none;
+}
+.book-brand a img {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.book-brand a span {
+  margin-left: 0.5rem;
+}
+.book-brand a:hover {
+  color: rgb(47, 47, 47);
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=brand.css.map */

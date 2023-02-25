@@ -1,0 +1,162 @@
+.book-sidebar {
+  position: fixed;
+  width: 12rem;
+  height: 100%;
+  z-index: 500;
+  background-color: #f7f8f9;
+  transition: transform 0.2s;
+}
+.book-sidebar.show {
+  transform: translateX(0);
+}
+.book-sidebar.hide {
+  transform: translateX(-100%);
+}
+@media all and (min-width: 1280px) {
+  .book-sidebar {
+    transform: translateX(0);
+  }
+}
+@media all and (max-width: 1279px) {
+  .book-sidebar {
+    transform: translateX(-100%);
+  }
+}
+.book-sidebar .book-brand {
+  display: flex;
+  position: fixed;
+  top: 0.85rem;
+  left: 1.25rem;
+  height: 2rem;
+}
+.book-sidebar .book-brand a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: rgb(47, 47, 47);
+  text-decoration: none;
+}
+.book-sidebar .book-brand a img {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.book-sidebar .book-brand a span {
+  margin-left: 0.5rem;
+}
+.book-sidebar .book-brand a:hover {
+  color: rgb(47, 47, 47);
+  text-decoration: none;
+}
+.book-sidebar .book-menu {
+  position: fixed;
+  top: 3.25rem;
+  bottom: 0rem;
+  width: 12rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 0.7rem;
+}
+.book-sidebar .book-menu h1,
+.book-sidebar .book-menu h2,
+.book-sidebar .book-menu h3,
+.book-sidebar .book-menu h4,
+.book-sidebar .book-menu h5,
+.book-sidebar .book-menu h6 {
+  padding: 0 0.6rem 0 1.25rem;
+  margin: 1.25rem 0 0.625rem 0;
+  font-size: 0.7rem;
+}
+.book-sidebar .book-menu ul,
+.book-sidebar .book-menu ol,
+.book-sidebar .book-menu li {
+  margin: 0;
+  list-style: none;
+}
+.book-sidebar .book-menu p {
+  margin: 0;
+}
+.book-sidebar .book-menu .uncollapsible {
+  padding: 0 0.6rem 0 1.25rem;
+  margin: 0 0 0.625rem 0;
+  border-top: 1px solid #e7e7e7;
+}
+.book-sidebar .book-menu .accordion {
+  padding: 0.625rem 0.6rem 0.625rem 1.25rem;
+  border-top: 1px solid rgb(231, 231, 231);
+}
+.book-sidebar .book-menu .accordion label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+.book-sidebar .book-menu .accordion .accordion-body {
+  margin: 0;
+}
+.book-sidebar .book-menu .accordion input:checked ~ .accordion-header .icon {
+  transform: rotate(-180deg);
+}
+.book-sidebar .book-menu .accordion i.icon-arrow-down::before {
+  border-width: 0.05rem;
+  border-color: #696969;
+  height: 0.3rem;
+  width: 0.3rem;
+}
+.book-sidebar .book-menu .accordion input:checked ~ .accordion-body, .book-sidebar .book-menu .accordion[open] .accordion-body {
+  max-height: unset;
+}
+.book-sidebar .book-menu ul {
+  margin-left: 0.5rem;
+}
+.book-sidebar .book-menu li {
+  margin-top: 0.625rem;
+}
+.book-sidebar .book-menu a {
+  color: rgb(47, 47, 47);
+  font-weight: 400;
+}
+.book-sidebar .book-menu a:hover {
+  color: rgb(128, 128, 128);
+}
+.book-sidebar .book-menu .current-tab {
+  color: #004ed0;
+  font-weight: 600;
+}
+.book-sidebar .book-menu.hide {
+  display: none;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  bottom: 0.6rem;
+  left: 12.7rem;
+  transition: left 200ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #686868;
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+}
+.sidebar-toggle.extend {
+  left: 0.7rem;
+}
+@media all and (max-width: 1280px) {
+  .sidebar-toggle {
+    display: none;
+  }
+}
+.sidebar-toggle > .sidebar-toggle-inner {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #686868;
+  display: none;
+}
+.sidebar-toggle > .sidebar-toggle-inner.show {
+  display: block;
+}
+
+/*# sourceMappingURL=book-sidebar.css.map */
