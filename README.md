@@ -23,13 +23,22 @@ Modify `theme` entry in `_config.yml`
 theme: book
 ```
 
+## ⚒ 配置
+
+### 快速上手
+
+在`[blog]/source`创建`menu.md`和`home.md`
+
+`menu.md`为书籍目录，`home.md`为书籍主界面
+
+**这两个文件是必须创建的，否则将主题将无法生成html文件**
+
+配置的详细信息，请参见 [Configurations](https://github.com/kaiiiz/hexo-theme-book/wiki/Configuration)（生肉）
+
+
 ## 🎈 更新
 
 cd到主题文件夹，运行`git pull`.
-
-## ⚒ 配置
-
-配置的详细信息，请参见 [Configurations](https://github.com/kaiiiz/hexo-theme-book/wiki/Configuration)（生肉）
 
 ## 🎁 特色
 
