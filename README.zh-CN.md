@@ -6,12 +6,6 @@
 
 ![book-preview](https://kaiiiz.github.io/hexo-theme-book-demo/images/header.png)
 
-## 关于本仓库
-
-由于[原仓库](https://github.com/kaiiiz/hexo-theme-book.git)的作者已经长达3年未更新，并且原仓库的渲染器也不再支持新版的hexo以及nodejs，所以从从原仓库分支并继续维护。
-
-该仓库不再需要安装scss渲染器，和其他主题一样直接clone即可
-
 ## 💿 安装
 ```
 git clone https://github.com/suswhw/hexo-theme-book-fork.git themes/book
