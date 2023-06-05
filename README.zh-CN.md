@@ -1,3 +1,5 @@
+[English](README.md) 简体中文
+
 <p align="center" class="has-mb-6">
 <img height="90" src="https://kaiiiz.github.io/hexo-theme-book-demo/images/logo.png">
 <br>A simple, elegant, book-like hexo theme with some useful features.
