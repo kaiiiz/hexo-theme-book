@@ -20,12 +20,6 @@ However, I suggest that you should try hugo first before using hexo (if you neve
 git clone https://github.com/kaiiiz/hexo-theme-book.git themes/book
 ```
 
-If you don't have scss renderer, follow this:
-
-```
-npm install hexo-renderer-scss --save
-```
-
 Modify `theme` entry in `_config.yml`
 
 ```
