@@ -1,4 +1,4 @@
-English [简体中文](README.zh-CN.md)
+English | [简体中文](README.zh-CN.md)
 
 <p align="center" class="has-mb-6">
 <img height="90" src="https://kaiiiz.github.io/hexo-theme-book-demo/images/logo.png">
