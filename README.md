@@ -8,7 +8,7 @@
 
 ## ⚠ Notice
 
-> WARNING: this project is no longer maintained, and may have bugs and security issues. Feel free to fork and modify it yourself if you like it. Also check out [Useful Forks](https://useful-forks.github.io/?repo=kaiiiz/hexo-theme-book) to find the same theme maintained by other developers.
+> WARNING: this project is no longer maintained, and may have bugs and security issues. Feel free to fork and modify it yourself if you like it. To find the same theme maintained by other developers, check out [Useful Forks](https://useful-forks.github.io/?repo=kaiiiz/hexo-theme-book).
 
 ## 💿 Installation
 
