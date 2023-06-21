@@ -1,0 +1,80 @@
+.book-menu {
+  position: fixed;
+  top: 3.25rem;
+  bottom: 0rem;
+  width: 12rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 0.7rem;
+}
+.book-menu h1,
+.book-menu h2,
+.book-menu h3,
+.book-menu h4,
+.book-menu h5,
+.book-menu h6 {
+  padding: 0 0.6rem 0 1.25rem;
+  margin: 1.25rem 0 0.625rem 0;
+  font-size: 0.7rem;
+}
+.book-menu ul,
+.book-menu ol,
+.book-menu li {
+  margin: 0;
+  list-style: none;
+}
+.book-menu p {
+  margin: 0;
+}
+.book-menu .uncollapsible {
+  padding: 0 0.6rem 0 1.25rem;
+  margin: 0 0 0.625rem 0;
+  border-top: 1px solid #e7e7e7;
+}
+.book-menu .accordion {
+  padding: 0.625rem 0.6rem 0.625rem 1.25rem;
+  border-top: 1px solid rgb(231, 231, 231);
+}
+.book-menu .accordion label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+.book-menu .accordion .accordion-body {
+  margin: 0;
+}
+.book-menu .accordion input:checked ~ .accordion-header .icon {
+  transform: rotate(-180deg);
+}
+.book-menu .accordion i.icon-arrow-down::before {
+  border-width: 0.05rem;
+  border-color: #696969;
+  height: 0.3rem;
+  width: 0.3rem;
+}
+.book-menu .accordion input:checked ~ .accordion-body, .book-menu .accordion[open] .accordion-body {
+  max-height: unset;
+}
+.book-menu ul {
+  margin-left: 0.5rem;
+}
+.book-menu li {
+  margin-top: 0.625rem;
+}
+.book-menu a {
+  color: rgb(47, 47, 47);
+  font-weight: 400;
+}
+.book-menu a:hover {
+  color: rgb(128, 128, 128);
+}
+.book-menu .current-tab {
+  color: #004ed0;
+  font-weight: 600;
+}
+.book-menu.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=menu.css.map */

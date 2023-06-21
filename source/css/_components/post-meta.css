@@ -1,0 +1,38 @@
+.book-post-meta {
+  display: block;
+  opacity: 1;
+  max-height: 150px;
+  overflow: auto;
+  font-size: 0.7rem;
+  transition: max-height 0.15s ease-in;
+  transition: opacity 0.15s ease-in;
+}
+.book-post-meta .author {
+  display: flex;
+}
+.book-post-meta .author .author-img {
+  display: flex;
+  align-items: center;
+}
+.book-post-meta .author .author-img figure {
+  background: #fff;
+}
+.book-post-meta .author .author-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 8px;
+}
+.book-post-meta .link a {
+  color: rgb(59, 67, 81);
+}
+.book-post-meta .link a:hover {
+  color: rgb(128, 128, 128);
+}
+.book-post-meta.hide {
+  opacity: 0;
+  max-height: 0;
+  transition: max-height 0.15s ease-out;
+}
+
+/*# sourceMappingURL=post-meta.css.map */

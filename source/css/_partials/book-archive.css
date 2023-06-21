@@ -1,0 +1,25 @@
+.book-archive h1,
+.book-archive h2 {
+  margin: 0;
+}
+.book-archive h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+.book-archive h2 {
+  font-size: 1rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #e7e7e7;
+}
+.book-archive .years {
+  padding-bottom: 1.25rem;
+}
+.book-archive .archive-list-item {
+  list-style: none;
+  margin: 0;
+}
+
+/*# sourceMappingURL=book-archive.css.map */

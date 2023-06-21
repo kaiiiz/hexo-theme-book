@@ -1,0 +1,35 @@
+.book-tocbot {
+  overflow: auto;
+  position: relative;
+  padding-right: 0.875rem;
+  transition: max-height 0.15s ease-in-out;
+}
+.book-tocbot ul {
+  list-style: none;
+  position: inherit;
+  overflow: hidden;
+}
+.book-tocbot ul li {
+  margin-left: 0.25rem;
+}
+.book-tocbot .toc-link::before {
+  background-color: white !important;
+}
+.book-tocbot .is-active-link::before {
+  background-color: #004ed0 !important;
+}
+
+.book-tocbot-menu {
+  margin: 1rem 0.75rem;
+}
+.book-tocbot-menu a {
+  display: block;
+  margin: 0.375rem 0;
+  color: #999;
+  cursor: pointer;
+}
+.book-tocbot-menu a:hover {
+  color: gray;
+}
+
+/*# sourceMappingURL=toc.css.map */
